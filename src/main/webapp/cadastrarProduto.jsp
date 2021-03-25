@@ -33,8 +33,9 @@
             <p>Preço</p>
             <input name="preco"/><br/>
             <br/>
-            <button type="submit">Cancelar</button>
-            <button type="submit">Cadastrar ir Imagens</button>
+<!--            <button type="submit">Cancelar</button>-->            
+            <button type="submit">Cadastrar ir Imagens</button><br/><br/>
+            <a href="index.jsp">Voltar</a>
         </form>
     </body>
 </html>

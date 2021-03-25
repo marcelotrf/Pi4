@@ -1,6 +1,10 @@
 servelet\AlterarProduto.class
+servelet\LoginUsuario.class
 bd\ConexaoBD.class
 dao\ProdutoDao.class
+dao\UsuarioDao.class
 entidade\Produto.class
+entidade\Usuario.class
 servelet\CadastrarProduto.class
 servelet\ListarProduto.class
+servelet\AtivarProduto.class

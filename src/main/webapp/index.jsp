@@ -15,6 +15,8 @@
         <h1>Menu</h1>
         <!--redirecionar para o servelet assim mostra na tela-->
         <a href="ListarProduto">Listar Produtos</a><br/>
-        <a href="cadastrarProduto.jsp">Cadastrar Produto</a>
+        <a href="cadastrarProduto.jsp">Cadastrar Produto</a><br/>
+        <a href="login.jsp">Login</a>
+        <a href="PaginaPrincipal">PaginaPrincipal</a>
     </body>
 </html>

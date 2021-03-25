@@ -143,6 +143,34 @@ public class ProdutoDao
         
     }
     
+    public static Produto getProdutoPP(String nome)
+    {
+        // declarar o retorno
+        Produto produto = null;
+         try {
+                Connection con = ConexaoBD.getConexao();
+//                cuidado com nome repetido
+                String query = "select * from produto where nome=?";
+                PreparedStatement ps = con.prepareStatement(query);
+                ps.setString(1, nome);
+                ResultSet rs = ps.executeQuery();
+                if(rs.next())
+                {                    
+                    String nomeExtenso = rs.getString("nomeExtenso"); 
+                    double preco = rs.getDouble("preco");
+//                    int qtdEstoque = rs.getInt("qtdEstoque"); 
+//                    String status = rs.getString("status");
+                    produto = new Produto(nomeExtenso,preco);                    
+                }                    
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(ListarProduto.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(ListarProduto.class.getName()).log(Level.SEVERE, null, ex);
+            }
+         return produto;
+        
+    }
+    
     public static void atualizarProduto(Produto produto) throws ClassNotFoundException, SQLException 
     {
         Connection con = ConexaoBD.getConexao();                  

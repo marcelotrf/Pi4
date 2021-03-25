@@ -64,6 +64,14 @@ public class Produto
         this.statusAlt = statusAlt;
     }
 
+    public Produto(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+    
+    
+    
+
     public Produto(String nome, String nomeExtenso, int qtdEstrela,  int qtdEstoque, double preco, String status, String statusAlt) {
         this.nome = nome;
         this.nomeExtenso = nomeExtenso;
@@ -144,10 +152,16 @@ public String getStatusAlt() {
         this.preco = preco;
     }
     
-    @Override
+//    @Override
+//    public String toString() {
+//        return String.format("Nome: %s <br/> "
+//                + "Email: %s <br/> <hr/>", nome, nomeExtenso);
+////        CPF %d <br/> removido temporariamente
+//    }
+    
+     @Override
     public String toString() {
-        return String.format("Nome: %s <br/> "
-                + "Email: %s <br/> <hr/>", nome, nomeExtenso);
+        return String.format("NomeExtenso: %s <br/> ", nomeExtenso);
 //        CPF %d <br/> removido temporariamente
     }
      
