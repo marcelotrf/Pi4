@@ -9,6 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
         <title>Castrar Produto</title>
     </head>
     <body>
@@ -35,6 +38,8 @@
             <br/>
 <!--            <button type="submit">Cancelar</button>-->            
             <button type="submit">Cadastrar ir Imagens</button><br/><br/>
+            <!--lembrar de levar o nome do produto-->
+            <a href="CadastrarImagens.jsp?nome=${produto.nome}" class="btn btn-primary">Cadastrar oficial</a>
             <a href="index.jsp">Voltar</a>
         </form>
     </body>

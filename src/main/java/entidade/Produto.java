@@ -64,8 +64,8 @@ public class Produto
         this.statusAlt = statusAlt;
     }
 
-    public Produto(String nome, double preco) {
-        this.nome = nome;
+    public Produto(String nomeExtenso, double preco) {
+        this.nomeExtenso = nomeExtenso;
         this.preco = preco;
     }
     

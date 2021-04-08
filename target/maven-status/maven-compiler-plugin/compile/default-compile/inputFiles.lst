@@ -1,11 +1,14 @@
 C:\Users\marce\Desktop\Pi4\src\main\java\entidade\Usuario.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\ListarProduto.java
+C:\Users\marce\Desktop\Pi4\src\main\java\entidade\Imagem.java
+C:\Users\marce\Desktop\Pi4\src\main\java\bd\ConexaoBD.java
+C:\Users\marce\Desktop\Pi4\src\main\java\servelet\AtivarProduto.java
+C:\Users\marce\Desktop\Pi4\src\main\java\entidade\Produto.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\PaginaPrincipal.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\CadastrarProduto.java
 C:\Users\marce\Desktop\Pi4\src\main\java\dao\UsuarioDao.java
+C:\Users\marce\Desktop\Pi4\src\main\java\servelet\CadastrarImagem.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\LoginUsuario.java
-C:\Users\marce\Desktop\Pi4\src\main\java\bd\ConexaoBD.java
+C:\Users\marce\Desktop\Pi4\src\main\java\dao\ImagemDao.java
 C:\Users\marce\Desktop\Pi4\src\main\java\dao\ProdutoDao.java
-C:\Users\marce\Desktop\Pi4\src\main\java\servelet\AtivarProduto.java
-C:\Users\marce\Desktop\Pi4\src\main\java\entidade\Produto.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\AlterarProduto.java

@@ -24,6 +24,10 @@
         <servlet-name>PaginaPrincipal</servlet-name>
         <servlet-class>servelet.PaginaPrincipal</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CadastrarImagem</servlet-name>
+        <servlet-class>servelet.CadastrarImagem</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarProduto</servlet-name>
         <url-pattern>/CadastrarProduto</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>PaginaPrincipal</servlet-name>
         <url-pattern>/PaginaPrincipal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastrarImagem</servlet-name>
+        <url-pattern>/CadastrarImagem</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
