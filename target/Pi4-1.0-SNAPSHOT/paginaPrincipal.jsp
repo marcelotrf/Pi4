@@ -26,171 +26,179 @@
         <div class="row">
             <div class="col-md-12">Cabecalho<br>(col-md-12)</div>
             <!--<h1>Hello World!</h1>-->
-            <!--            <div class="d-flex justify-content-between">
-              <div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/IMG_4594.JPG" class="img-fluid" alt="Texto alternativo(alt)"></div>
-              <div class="w-50 p-3" class="d-flex justify-content-betweent"><input type="text" class="form-control" placeholder="Search"></div>
-              <div class="w-25 p-3" class="p-2 flex-fill bd-highlight"><a href="login.jsp">Login</a></div>
-              <div class="p-2 flex-fill bd-highlight"><span class="glyphicon glyphicon-search"></span></div>
-            </div>-->
+            <div class="d-flex justify-content-between">
+                <div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>
+                <div class="w-50 p-3" class="d-flex justify-content-betweent"><input type="text" class="form-control" placeholder="Search"></div>
+                <div class="w-25 p-3" class="p-2 flex-fill bd-highlight"><a href="login.jsp">Login</a></div>
+                <div class="p-2 flex-fill bd-highlight"><span class="glyphicon glyphicon-search"></span></div>
+            </div>
+            <!--outro teste-->
+            <!--<img src="img/IMG_4594.JPG" class="img-fluid" width: 10%; alt="Texto alternativo(alt)">-->
 
-            <img src="img/IMG_4594.JPG" class="img-fluid" width: 10%; alt="Texto alternativo(alt)">
-
-            <form class="navbar-form navbar-left" role="search">
+            <!--            <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </form>-->
+        </div>
+        <!--</div>--> 
+        <!--apenas teste-->
+        <!--    <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Search">
                 </div>
                 <button type="submit" class="btn btn-default">
                     <span class="glyphicon glyphicon-search"></span>
                 </button>
-            </form>
-        </div>
-    </div> 
-
-    <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">
-            <span class="glyphicon glyphicon-search"></span>
-        </button>
-    </form>
-    <a href="login.jsp">Login</a>
-</div>
-<div class="row">
-    <div class="col-md-6"> 
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Check this custom checkbox 1</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Check this custom checkbox 2</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Check this custom checkbox 3</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Check this custom checkbox 4</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Check this custom checkbox 5</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Check this custom checkbox 6</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Check this custom checkbox 7</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1">Check this custom checkbox 8</label>
-        </div>                
-        Coluna de anuncios<br>(col-md-6)
-    </div>                
-    <div class="col-md-6">
+            </form>-->
+        <!--<a href="login.jsp">Login</a>-->
+        <!--</div>-->
         <div class="row">
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="./img/IMG_4594.JPG" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">${produto.nomeExtenso} ${produto.preco}</p>
-                        <a href="login.jsp" class="btn btn-primary">Login</a>
-                        <!--<a href="login.jsp">Login</a>-->
-                        <a href="" class="btn btn-primary">Go 2</a>
-                    </div>
+            <div class="col-md-6"> 
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 1</label>
                 </div>
-                Coluna de anuncios<br>(col-md-3)
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 2</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 3</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 4</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 5</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 6</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 7</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 8</label>
+                </div>                
+                Coluna de anuncios<br>(col-md-6)
+            </div>                
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/${produtoI.nomeImagem}" class="card-img-top" alt="...">
+                            <!--<img  src="img/${produtoI8.nomeImagem}" class="card-img-top">-->
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${produto.nomeExtenso}</p>
+                                <p class="card-text">R$ ${produto.preco}</p>
+                                <!--                                <a href="login.jsp" class="btn btn-primary">Login</a>-->
+                                <a href="VisualizarProduto?nome=${produtoNome}" class="btn btn-primary">Ver</a> 
+                                <!--<a href="login.jsp">Login</a>-->
+                                <!--<a href="" class="btn btn-primary">Go 2</a>-->
+                            </div>
+                        </div>
+                        Coluna de anuncios<br>(col-md-3)
 
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">${produto2.nomeExtenso} ${produto2.preco}</p>
-                        <a href="#" class="btn btn-primary">Ver</a>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/${produtoI2.nomeImagem}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${produto2.nomeExtenso}</p>
+                                <p class="card-text">R$ ${produto2.preco}</p>
+                                <a href="VisualizarProduto?nome=${produto2Nome}" class="btn btn-primary">Ver</a> 
+                            </div>
+                        </div>
+                        Coluna de anuncios<br>(col-md-3)
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/${produtoI3.nomeImagem}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${produto3.nomeExtenso} </p>
+                                <p class="card-text">R$ ${produto3.preco}</p>
+                                <a href="VisualizarProduto?nome=${produto3Nome}" class="btn btn-primary">Ver</a>
+                            </div>
+                        </div>
+                        Coluna de anuncios<br>(col-md-3)
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/${produtoI4.nomeImagem}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${produto4.nomeExtenso}</p>
+                                <p class="card-text">R$ ${produto4.preco}</p>
+                                <a href="VisualizarProduto?nome=${produto4Nome}" class="btn btn-primary">Ver</a>
+                            </div>
+                        </div>
+                        Coluna de anuncios<br>(col-md-3)
                     </div>
                 </div>
-                Coluna de anuncios<br>(col-md-3)
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">${produto3.nomeExtenso} ${produto3.preco}</p>
-                        <a href="#" class="btn btn-primary">Ver</a>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">${produto5.nomeExtenso} ${produto5.preco}</p>
+                                <a href="#" class="btn btn-primary">Ver</a>
+                            </div>
+                        </div>
+                        Coluna de anuncios<br>(col-md-3)
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">${produto6.nomeExtenso} ${produto6.preco}</p>
+                                <a href="#" class="btn btn-primary">Ver</a>
+                            </div>
+                        </div>
+                        Coluna de anuncios<br>(col-md-3)
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/${produtoI7.nomeImagem}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick ${produto7.nomeExtenso} ${produto7.preco}</p>
+                                <a href="#" class="btn btn-primary">Ver</a>
+                            </div>
+                        </div>
+                        Coluna de anuncios<br>(col-md-3)
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <!--<img src="..." class="card-img-top" alt="...">-->
+                            <img  src="img/${produtoI8.nomeImagem}" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>                      
+                                <p class="card-text">Some ${produto8.nomeExtenso} ${produto8.preco}</p>
+                                teste ${produto8Nome} apagar
+
+
+                                <a href="VisualizarProduto?nome=${produto8Nome}" class="btn btn-primary">Ver</a>                              
+                            </div>
+                        </div>
+                        Coluna de anuncios<br>(col-md-3)
                     </div>
                 </div>
-                Coluna de anuncios<br>(col-md-3)
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">${produto4.nomeExtenso} ${produto4.preco}</p>
-                        <a href="#" class="btn btn-primary">Ver</a>
-                    </div>
-                </div>
-                Coluna de anuncios<br>(col-md-3)
-            </div>
+            </div>                
         </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">${produto5.nomeExtenso} ${produto5.preco}</p>
-                        <a href="#" class="btn btn-primary">Ver</a>
-                    </div>
-                </div>
-                Coluna de anuncios<br>(col-md-3)
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">${produto6.nomeExtenso} ${produto6.preco}</p>
-                        <a href="#" class="btn btn-primary">Ver</a>
-                    </div>
-                </div>
-                Coluna de anuncios<br>(col-md-3)
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick ${produto7.nomeExtenso} ${produto7.preco}</p>
-                        <a href="#" class="btn btn-primary">Ver</a>
-                    </div>
-                </div>
-                Coluna de anuncios<br>(col-md-3)
-            </div>
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>                      
-                        <p class="card-text">Some ${produto8.nomeExtenso} ${produto8.preco}</p>
-
-
-                        <a href="#" class="btn btn-primary">Ver</a>
-                    </div>
-                </div>
-                Coluna de anuncios<br>(col-md-3)
-            </div>
-        </div>
-    </div>                
-</div>
-</body>
+    </body>
 </html>

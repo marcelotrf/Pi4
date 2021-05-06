@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppinns',sans-serif;   
+}
+html,body
+{
+    display: grid;
+    height: 100%;
+    place-items:center;
+    text-align: center;
+}
+
+.containerUpload
+{
+    height: 350px;
+    width: 430px;
+}
+
+.containerUpload .wrapperUpload
+{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;   
+    /*border: 2px dashed red;*/   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wrapperUpload .active{
+    border: none;
+}
+
+.wrapperUpload .imageUpload
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapperUpload .imageUpload img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.wrapperUpload .icon
+{
+    font-size: 100px;
+    color: #9658fe;
+}
+
+.wrapperUpload .text
+{
+    font-size: 20px;
+    font-weight: 500;
+    color: #5B5B7B;
+}
+
+.wrapperUpload #cancel-btn
+{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #9658fe;
+    display: none;
+}
+
+.wrapperUpload.active:hover #cancel-btn
+{
+     display: block;
+    
+}
+
+.wrapperUpload #cancel-btn:hover
+{
+     color: #e74c3c;    
+}
+
+.wrapperUpload .file-name
+{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    color: #fff;
+    padding: 8px 0;
+    font-size: 18px;
+    display: none;
+    background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%);
+}
+
+.wrapperUpload.active:hover .file-name
+{
+    display: block;
+    
+}
+
+.containerUpload #custom-btn
+{
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    display: block;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%);
+}
+
+ 

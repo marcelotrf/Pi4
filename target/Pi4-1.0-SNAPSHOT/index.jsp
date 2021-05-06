@@ -18,5 +18,10 @@
         <a href="cadastrarProduto.jsp">Cadastrar Produto</a><br/>
         <a href="login.jsp">Login</a>
         <a href="PaginaPrincipal">PaginaPrincipal</a>
+        
+         
+            <a href="CadastrarImagem?nome=${nome}">Cadastrar ir Imagens correto ${nome}</a><br/><br/>
+            <!--<a href="CadastrarImagem?nome=${produto.nome}">Imagem teste</a>-->
+            
     </body>
 </html>

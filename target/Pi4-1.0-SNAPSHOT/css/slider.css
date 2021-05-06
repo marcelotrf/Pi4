@@ -29,7 +29,8 @@ body
 {
     object-fit: cover;
     max-width: 180px;
-    max-width: 100px;
+    max-height: 100px;
+    /*max-width: 100px;*/
     cursor: pointer;
     opacity: 0.5;
     margin: 5px;
@@ -62,6 +63,37 @@ body
     overflow-x: hidden;
 }
 
+.slider .containerUpload
+{
+    height: 350px;
+    width: 430px;
+}
+
+.containerUpload .wrapper
+{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;   
+    /*border: 2px dashed red;*/   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wrapper .imageUpload
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .arrow
 {
     width: 30px;
@@ -75,4 +107,21 @@ body
     opacity: .5;
     width: 35px;
     height: 35px;
+}
+
+img{
+    /*height: 250px;*/
+    border-radius: 10px;
+    box-shadow: 0 0 1.2rem rgba(0,0,0,0.25);
+    margin: 10px;
+
+    object-fit: cover;
+    max-width: 180px;
+    max-height: 100px;
+    
+    cursor: pointer;
+    /*opacity: 0.5;*/
+    margin: 5px;
+    /*border: 7px solid black;*/
+
 }

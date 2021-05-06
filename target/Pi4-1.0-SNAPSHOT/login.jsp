@@ -13,11 +13,14 @@
     </head>
     <body>
         <h1>Login</h1>
-        <form action="LoginUsuario"method="POST">           
-            <p>Nome do Produto</p>
-            <input name="nome"/><br/>
-            <p>Nome Extenso0</p>
-            <input name="senha"/><br/>            
+        <form action="LoginUsuario"method="POST">          
+            <!--teste caso precise nao ser email-->
+            <!--            <p>Nome do Produto</p>
+                        <input name="nome"/><br/>-->
+            <p>Email</p>
+            <input type="email" name="email"/><br/>
+            <p>Senha</p>
+            <input type="password" name="senha"/><br/>            
             <button type="submit">Cancelar</button>
             <button type="submit">Cadastrar ir Imagens</button>
         </form>

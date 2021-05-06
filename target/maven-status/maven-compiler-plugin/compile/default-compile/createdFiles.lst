@@ -1,14 +1,11 @@
 servelet\CadastrarProduto.class
-servelet\AtivarProduto.class
 servelet\AlterarProduto.class
-servelet\PaginaPrincipal.class
 servelet\CadastrarImagem.class
-servelet\LoginUsuario.class
 bd\ConexaoBD.class
 dao\ProdutoDao.class
-dao\UsuarioDao.class
 entidade\Produto.class
 entidade\Usuario.class
 entidade\Imagem.class
-servelet\ListarProduto.class
 dao\ImagemDao.class
+servelet\AtivarProduto.class
+servelet\ListarProduto.class

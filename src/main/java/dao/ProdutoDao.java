@@ -145,6 +145,7 @@ public class ProdutoDao
     
     public static Produto getProdutoPP(String nome)
     {
+        ///pp eh pagina principal
         // declarar o retorno
         Produto produto = null;
          try {

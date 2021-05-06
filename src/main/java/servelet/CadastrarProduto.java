@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -77,6 +78,7 @@ public class CadastrarProduto extends HttpServlet {
 //            jsp cadastrar produto, metodo post para um formulario, jsp pega informacao digitada nos campos
 //            <form action="CadastrarProduto"method="POST">
     {
+        request.setCharacterEncoding("UTF-8");
         String nome = request.getParameter("nome");
         String nomeExtenso = request.getParameter("nomeExtenso");
         String qtdEstrelaStr = request.getParameter("qtdEstrela");
@@ -93,7 +95,16 @@ public class CadastrarProduto extends HttpServlet {
         try {
             ProdutoDao.addProduto(produtojsp);
 //            redirecionar para uma pagina de confirmação
-            response.sendRedirect("index.jsp");
+//            response.sendRedirect("index.jsp");
+           /////////// //teste para cadastrar imagem
+            request.setAttribute("nome", nome);
+//            response.sendRedirect("index.jsp");
+//            testando
+//             RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("cadastrarImagensOfi.jsp");
+//             requestDispatcher.forward(request, response);
+//                    fim do teste
+            RequestDispatcher dispatcher = request.getRequestDispatcher("cadastrarImagensOfi.jsp");
+        dispatcher.forward(request, response);
         } catch (Exception ex) {
             Logger.getLogger(CadastrarProduto.class.getName()).log(Level.SEVERE, null, ex);
         } 

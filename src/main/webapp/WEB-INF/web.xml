@@ -27,6 +27,55 @@
     <servlet>
         <servlet-name>CadastrarImagem</servlet-name>
         <servlet-class>servelet.CadastrarImagem</servlet-class>
+        <multipart-config>
+            <max-file-size>20848820</max-file-size>
+            <max-request-size>418018841</max-request-size>
+            <file-size-threshold>1048576</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastrarUsuario</servlet-name>
+        <servlet-class>servelet.CadastrarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarFuncionario</servlet-name>
+        <servlet-class>servelet.ListarFuncionario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlterarFuncionario</servlet-name>
+        <servlet-class>servelet.AlterarFuncionario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AtivarFuncionario</servlet-name>
+        <servlet-class>servelet.AtivarFuncionario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginFuncionario</servlet-name>
+        <servlet-class>servelet.LoginFuncionario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastrarComprador</servlet-name>
+        <servlet-class>servelet.CadastrarComprador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>alterarComprador</servlet-name>
+        <servlet-class>servelet.alterarComprador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlterarComprador</servlet-name>
+        <servlet-class>servelet.AlterarComprador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastrarEEntrega</servlet-name>
+        <servlet-class>servelet.CadastrarEEntrega</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VisualizarProduto</servlet-name>
+        <servlet-class>servelet.VisualizarProduto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PaginaPrincipalLogado</servlet-name>
+        <servlet-class>servelet.PaginaPrincipalLogado</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarProduto</servlet-name>
@@ -55,6 +104,50 @@
     <servlet-mapping>
         <servlet-name>CadastrarImagem</servlet-name>
         <url-pattern>/CadastrarImagem</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastrarUsuario</servlet-name>
+        <url-pattern>/CadastrarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarFuncionario</servlet-name>
+        <url-pattern>/ListarFuncionario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarFuncionario</servlet-name>
+        <url-pattern>/AlterarFuncionario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AtivarFuncionario</servlet-name>
+        <url-pattern>/AtivarFuncionario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginFuncionario</servlet-name>
+        <url-pattern>/LoginFuncionario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastrarComprador</servlet-name>
+        <url-pattern>/CadastrarComprador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>alterarComprador</servlet-name>
+        <url-pattern>/alterarComprador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarComprador</servlet-name>
+        <url-pattern>/AlterarComprador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastrarEEntrega</servlet-name>
+        <url-pattern>/CadastrarEEntrega</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VisualizarProduto</servlet-name>
+        <url-pattern>/VisualizarProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaginaPrincipalLogado</servlet-name>
+        <url-pattern>/PaginaPrincipalLogado</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

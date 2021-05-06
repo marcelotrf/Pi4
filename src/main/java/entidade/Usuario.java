@@ -14,7 +14,49 @@ public class Usuario
     String nome;
     String login;
     String senha;
+    String tipo;
+    String email;
+    String status;
     boolean administrador;
+//    talvez tenha que mudar o administrador e login
+    
+    public Usuario(String nome, String senha) {
+        this.nome = nome;
+        this.senha = senha;
+    }
+
+    public Usuario(String nome, String senha, String tipo, String email, String status) {
+        this.nome = nome;
+        this.senha = senha;
+        this.tipo = tipo;
+        this.email = email;
+        this.status = status;
+    }
+
+    public Usuario(String nome, String tipo, String email) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.email = email;
+    }
+
+    public Usuario(String nome, String senha, String tipo, String email) {
+        this.nome = nome;
+        this.senha = senha;
+        this.tipo = tipo;
+        this.email = email;
+    }
+    
+    public Usuario() {
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 
     public String getNome() {
         return nome;
@@ -46,6 +88,30 @@ public class Usuario
 
     public void setAdministrador(boolean administrador) {
         this.administrador = administrador;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
     
     

@@ -1,0 +1,166 @@
+body
+{
+    padding-top: 100px;
+}
+#content-wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.colum
+{
+    width: 680px;
+    padding: 10px;
+}
+
+#featured
+{
+/*    max-width: 500px;
+    max-height: 600px;*/
+    /*teste/////*/
+    max-width: 500px;
+    max-height: 400px;    
+/*    maquina 500 500
+    bota 342 486
+    bege 500 351,59
+    cachorro 451 600*/
+    /*fimtestes//////////*/
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.thumbnail
+{
+    object-fit: cover;
+    max-width: 180px;
+    max-height: 100px;
+    /*max-width: 100px;*/
+    cursor: pointer;
+    opacity: 0.5;
+    margin: 5px;
+    border: 7px solid black;
+}
+
+.thumbnail:hover
+{
+    opacity: 1;
+}
+
+.active
+{
+    opacity: 1;
+}
+
+#slide-wrapper
+{    
+    /*max-width: 500px;*/
+    /*teste*/
+    max-width: 435px;
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+}
+
+#slider
+{
+    width: 440px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+}
+
+.slider .containerUpload
+{
+    height: 350px;
+    width: 430px;
+}
+
+.containerUpload .wrapper
+{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;   
+    /*border: 2px dashed red;*/   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wrapper .imageUpload
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow
+{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.arrow hover
+{
+    opacity: .5;
+    width: 35px;
+    height: 35px;
+}
+
+img{
+    /*height: 250px;*/
+    border-radius: 10px;
+    box-shadow: 0 0 1.2rem rgba(0,0,0,0.25);
+    margin: 10px;
+
+    object-fit: cover;
+    max-width: 180px;
+    max-height: 100px;
+    
+    cursor: pointer;
+    /*opacity: 0.5;*/
+    margin: 5px;
+    /*border: 7px solid black;*/
+
+}
+
+.borda{
+    margin-left: 84px;
+    border: 3px solid black;
+     /*border-radius: 10px;*/
+}
+
+#colum2{
+    padding-left: 250px;
+    
+}
+
+.coluna15{
+   padding-left: 0px;
+    padding-top: 119px;
+    
+}
+
+.descrição{
+    max-width: 400px;
+    max-height: 200;
+    /*size: 400;*/
+    
+}
+
+#nomeH3
+{
+    padding-left: 72px;
+}

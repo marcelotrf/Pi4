@@ -37,6 +37,7 @@
                         <!--<td>dolar aqui{produto.statusAlt}</td>-->
                         
                         <td><a href="AlterarProduto?nome=${produto.nome}">Alterar</a></td>
+                        <td><a href="CadastrarImagem?nome=${produto.nome}">Imagem teste</a></td>
                         <!--<td><a href="ExcluirProduto?nome"dolar aqui{produto.nome}">Excluir</a></td>--> 
                         <td><a href="AtivarProduto?nome=${produto.nome}">Ativar ou Reativar</a></td> 
                                                

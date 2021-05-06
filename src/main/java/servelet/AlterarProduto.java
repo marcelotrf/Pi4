@@ -93,6 +93,7 @@ public class AlterarProduto extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
+        request.setCharacterEncoding("UTF-8");
         String nome = request.getParameter("nome");        
         String nomeExtenso = request.getParameter("nomeExtenso");        
         String qtdEstoqueStr = request.getParameter("qtdEstoque");        

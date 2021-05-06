@@ -37,9 +37,17 @@
             <input name="preco"/><br/>
             <br/>
 <!--            <button type="submit">Cancelar</button>-->            
-            <button type="submit">Cadastrar ir Imagens</button><br/><br/>
+            <button type="submit">Cadastrar ir Imagens aperte aqui</button><br/><br/>
             <!--lembrar de levar o nome do produto-->
-            <a href="CadastrarImagens.jsp?nome=${produto.nome}" class="btn btn-primary">Cadastrar oficial</a>
+            <!--deu errado-->
+<!--            <a href="cadastrarImagensOfi.jsp?nome=dolar{nome}" class="btn btn-primary">Cadastrar oficial</a>-->
+            <!--teste-->
+            ${nome}
+            <a href="CadastrarImagem?nome=${nome}">Cadastrar ir Imagens correto ${nome}</a><br/><br/>
+            <!--<a href="CadastrarImagem?nome=${nome}" class="btn btn-primary"></a>Cadastrar ir Imagens correto ${nome}<br/><br/>-->
+            
+            <!--<a href="CadastrarImagem?nome=${produto.nome} class="btn btn-primary">Imagem teste</a>-->
+            <!--fim teste-->
             <a href="index.jsp">Voltar</a>
         </form>
     </body>

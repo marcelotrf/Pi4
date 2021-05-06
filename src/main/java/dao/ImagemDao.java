@@ -38,7 +38,7 @@ public class ImagemDao
         
     }
     
-    public static List<Imagem> getImagem(String nome)
+    public static List<Imagem> getImagem(String nomeProduto)
     {
         List<Imagem> listaImagem = new ArrayList();
         
@@ -46,14 +46,14 @@ public class ImagemDao
                 Connection con = ConexaoBD.getConexao();
                 String query = "select * from imagem where nomeProduto=?";
                 PreparedStatement ps = con.prepareStatement(query);
-                ps.setString(1, nome);
+                ps.setString(1, nomeProduto);
                 ResultSet rs = ps.executeQuery();
                 while(rs.next())
                 {
 //                    String nome = rs.getString("nomeProduto");
                     String nomeImagem = rs.getString("nomeImagem");                   
 
-                    listaImagem.add(new Imagem(nome,nomeImagem));                     
+                    listaImagem.add(new Imagem(nomeProduto,nomeImagem));                     
 
                 }                    
             } catch (ClassNotFoundException ex) {
@@ -62,6 +62,38 @@ public class ImagemDao
                 Logger.getLogger(ListarProduto.class.getName()).log(Level.SEVERE, null, ex);
             }
          return listaImagem;
+        
+    }
+    
+    public static boolean VerificaImagem(String nomeProduto,String nomeImagem)
+    {
+//        List<Imagem> listaImagem = new ArrayList();
+        boolean verifica=false;
+        
+         try {
+                Connection con = ConexaoBD.getConexao();
+                String query = "select nomeProduto from imagem where nomeImagem=? and nomeProduto=?";
+                PreparedStatement ps = con.prepareStatement(query);
+                ps.setString(1, nomeImagem);
+                ps.setString(2, nomeProduto);
+                ResultSet rs = ps.executeQuery();
+                while(rs.next())
+                {
+//                    String nome = rs.getString("nomeProduto");
+//                    String nomeImagem = rs.getString("nomeImagem");                   
+//
+//                    listaImagem.add(new Imagem(nomeProduto,nomeImagem));
+                  String  nomeProduto2 = rs.getString("nomeProduto");
+                  if(nomeProduto.equals(nomeProduto2))
+verifica = true;                    
+
+                }                    
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(ListarProduto.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(ListarProduto.class.getName()).log(Level.SEVERE, null, ex);
+            }
+         return verifica;
         
     }
     
