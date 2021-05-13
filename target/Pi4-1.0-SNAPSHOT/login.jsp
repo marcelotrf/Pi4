@@ -24,5 +24,6 @@
             <button type="submit">Cancelar</button>
             <button type="submit">Cadastrar ir Imagens</button>
         </form>
+        <a href="cadastrarUsuario" class="btn btn-primary">Cadastrar</a>   
     </body>
 </html>

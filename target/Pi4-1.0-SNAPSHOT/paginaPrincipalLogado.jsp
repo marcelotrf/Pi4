@@ -116,13 +116,18 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
-                            <img src="./img/IMG_4594.JPG" class="card-img-top" alt="...">
+                            <img src="img/${produtoI.nomeImagem}" class="card-img-top" alt="...">
+                            <!--<img  src="img/dolar{produtoI8.nomeImagem}" class="card-img-top">-->
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">${produto.nomeExtenso} ${produto.preco}</p>
-                                <a href="login.jsp" class="btn btn-primary">Login</a>
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${produto.nomeExtenso}</p>
+                                <p class="card-text">R$ ${produto.preco}</p>
+                                <!--                                <a href="login.jsp" class="btn btn-primary">Login</a>-->
+                                <!--<a href="VisualizarProduto?nome=dolar{produtoNome}" class="btn btn-primary">Ver</a>--> 
+                                <!--teste apagar linha abaixo--> 
+                                <a href="Carrinho?email=${nome}&nomeProduto=${produtoNome}" class="btn btn-primary">Carrinho de compra</a>                                 
                                 <!--<a href="login.jsp">Login</a>-->
-                                <a href="" class="btn btn-primary">Go 2</a>
+                                <!--<a href="" class="btn btn-primary">Go 2</a>-->
                             </div>
                         </div>
                         Coluna de anuncios<br>(col-md-3)

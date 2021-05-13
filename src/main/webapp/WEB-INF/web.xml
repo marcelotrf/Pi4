@@ -77,6 +77,18 @@
         <servlet-name>PaginaPrincipalLogado</servlet-name>
         <servlet-class>servelet.PaginaPrincipalLogado</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Carrinho</servlet-name>
+        <servlet-class>servelet.Carrinho</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlterarQuantidadeCarrinho</servlet-name>
+        <servlet-class>servelet.AlterarQuantidadeCarrinho</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarCheckout</servlet-name>
+        <servlet-class>servelet.ListarCheckout</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarProduto</servlet-name>
         <url-pattern>/CadastrarProduto</url-pattern>
@@ -148,6 +160,18 @@
     <servlet-mapping>
         <servlet-name>PaginaPrincipalLogado</servlet-name>
         <url-pattern>/PaginaPrincipalLogado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Carrinho</servlet-name>
+        <url-pattern>/Carrinho</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarQuantidadeCarrinho</servlet-name>
+        <url-pattern>/AlterarQuantidadeCarrinho</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarCheckout</servlet-name>
+        <url-pattern>/ListarCheckout</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

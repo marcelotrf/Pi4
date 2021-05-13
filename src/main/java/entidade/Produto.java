@@ -52,13 +52,16 @@ public class Produto
         this.preco = preco;
         this.status = status;
     }
-
-    public Produto(String nome, String nomeExtenso, String status, int qtdEstoque) {
+//incluiu para carrinho
+    public Produto(String nome, String nomeExtenso, String status, int qtdEstoque, double preco) {
         this.nome = nome;
         this.nomeExtenso = nomeExtenso;
         this.status = status;
         this.qtdEstoque = qtdEstoque;
+        this.preco = preco;
     }
+    
+    
 
     public Produto(String statusAlt) {
         this.statusAlt = statusAlt;

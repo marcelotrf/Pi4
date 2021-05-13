@@ -91,6 +91,7 @@ public class AlterarComprador extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         String nome = request.getParameter("nome");  
         String senha = request.getParameter("senha"); 
         String tipo = request.getParameter("tipo"); 

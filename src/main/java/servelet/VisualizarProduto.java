@@ -63,6 +63,7 @@ public class VisualizarProduto extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException 
     {
+        request.setCharacterEncoding("UTF-8");
 //        String nome = "novo";
 //        String nome = "Maquina de lavar3";
         // teste para pegar variavel

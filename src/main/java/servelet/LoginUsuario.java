@@ -179,7 +179,7 @@ public class LoginUsuario extends HttpServlet {
 //        String nome6 = request.getParameter("nome");
 //        String nome7 = request.getParameter("nome");
 //        String nome8 = request.getParameter("nome");
-        String nome = "novo";
+        String nome = "Mocassim Preto Strass";
         String nome2 = "teste";
         String nome3 = "cadastro de teste";
         String nome4 = "nome novo";
@@ -190,7 +190,7 @@ public class LoginUsuario extends HttpServlet {
 //        String nome8 = "a";Segunda tentativa
         String nome8 = "Segunda tentativa";
         
-        
+        //pp pagina principal
         Produto produto = ProdutoDao.getProdutoPP(nome);
         request.setAttribute("produto",produto); 
         Produto produto2 = ProdutoDao.getProdutoPP(nome2);
@@ -212,6 +212,11 @@ public class LoginUsuario extends HttpServlet {
 //        request.setAttribute("listaimagens", listaImagens);
         request.setAttribute("produtoI8",imagens);
         ///fim teste ////
+        
+        listaImagens = ImagemDao.getImagem(nome);
+        imagens = listaImagens.get(0);
+        request.setAttribute("produtoI",imagens);
+        request.setAttribute("produtoNome",nome); 
         
         listaImagens = ImagemDao.getImagem(nome7);
         imagens = listaImagens.get(0);

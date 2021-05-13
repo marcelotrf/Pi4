@@ -97,7 +97,9 @@ public class ProdutoDao
                     String nomeExtenso = rs.getString("nomeExtenso"); 
                     int qtdEstoque = rs.getInt("qtdEstoque"); 
                     String status = rs.getString("status");
-                    produto = new Produto(nome,nomeExtenso,status,qtdEstoque);                    
+//                   incluido preco para carrinho
+                    Double preco = rs.getDouble("preco");
+                    produto = new Produto(nome,nomeExtenso,status,qtdEstoque,preco);                    
                 }                    
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ListarProduto.class.getName()).log(Level.SEVERE, null, ex);

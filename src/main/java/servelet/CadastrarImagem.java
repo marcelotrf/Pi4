@@ -110,6 +110,7 @@ public class CadastrarImagem extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         String nome = request.getParameter("nome");
 //teste
 //        String nome = "Maquina de lavar";
@@ -186,6 +187,7 @@ public class CadastrarImagem extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
 //        String nome = "Maquina de lavar3";
 //        String nomeImg = request.getParameter("nomeImg");
 

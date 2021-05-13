@@ -1,7 +1,9 @@
+C:\Users\marce\Desktop\Pi4\src\main\java\servelet\ListarCheckout.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\ListarProduto.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\CadastrarComprador.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\AtivarProduto.java
 C:\Users\marce\Desktop\Pi4\src\main\java\entidade\Produto.java
+C:\Users\marce\Desktop\Pi4\src\main\java\servelet\AlterarQuantidadeCarrinho.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\ListarFuncionario.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\CadastrarProduto.java
 C:\Users\marce\Desktop\Pi4\src\main\java\dao\UsuarioDao.java
@@ -14,6 +16,7 @@ C:\Users\marce\Desktop\Pi4\src\main\java\entidade\Usuario.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\CadastrarEEntrega.java
 C:\Users\marce\Desktop\Pi4\src\main\java\entidade\Imagem.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\AlterarComprador.java
+C:\Users\marce\Desktop\Pi4\src\main\java\dao\CarrinhoDao.java
 C:\Users\marce\Desktop\Pi4\src\main\java\bd\ConexaoBD.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\AtivarFuncionario.java
 C:\Users\marce\Desktop\Pi4\src\main\java\dao\CompradorDao.java
@@ -22,5 +25,7 @@ C:\Users\marce\Desktop\Pi4\src\main\java\servelet\PaginaPrincipal.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\CadastrarImagem.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\LoginUsuario.java
 C:\Users\marce\Desktop\Pi4\src\main\java\entidade\Comprador.java
+C:\Users\marce\Desktop\Pi4\src\main\java\entidade\CarrinhoE.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\PaginaPrincipalLogado.java
 C:\Users\marce\Desktop\Pi4\src\main\java\servelet\CadastrarUsuario.java
+C:\Users\marce\Desktop\Pi4\src\main\java\servelet\Carrinho.java

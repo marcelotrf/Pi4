@@ -90,8 +90,9 @@
                     <!--<p>paragrafo</p>-->
                     <!--<input value="1" type="number">-->
                     <!--bootstrap-->
+                    <!--//alterado devido ao logado-->
+                    <a class="btn btn-dark" href="Carrinho?nomeProduto=${nomeProduto}">Comprar</a> <a class="btn btn-dark" href="PaginaPrincipal">voltar</a>
                     
-                    <a class="btn btn-dark" href="#">Comprar</a> <a class="btn btn-dark" href="PaginaPrincipal">voltar</a>
 
                 </div>
             </div>

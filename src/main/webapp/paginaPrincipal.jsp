@@ -151,22 +151,24 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="img/${produtoI5.nomeImagem}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">${produto5.nomeExtenso} ${produto5.preco}</p>
-                                <a href="#" class="btn btn-primary">Ver</a>
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${produto5.nomeExtenso}</p>
+                                <p class="card-text">R$ ${produto5.preco}</p>
+                                <a href="VisualizarProduto?nome=${produto5Nome}" class="btn btn-primary">Ver</a>
                             </div>
                         </div>
                         Coluna de anuncios<br>(col-md-3)
                     </div>
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="img/${produtoI6.nomeImagem}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">${produto6.nomeExtenso} ${produto6.preco}</p>
-                                <a href="#" class="btn btn-primary">Ver</a>
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${produto6.nomeExtenso}</p>
+                                <p class="card-text">R$ ${produto6.preco}</p>
+                                <a href="VisualizarProduto?nome=${produto6Nome}" class="btn btn-primary">Ver</a>
                             </div>
                         </div>
                         Coluna de anuncios<br>(col-md-3)
@@ -175,9 +177,10 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/${produtoI7.nomeImagem}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick ${produto7.nomeExtenso} ${produto7.preco}</p>
-                                <a href="#" class="btn btn-primary">Ver</a>
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${produto7.nomeExtenso}</p>
+                                <p class="card-text">R$ ${produto7.preco}</p>
+                                <a href="VisualizarProduto?nome=${produto7Nome}" class="btn btn-primary">Ver</a>
                             </div>
                         </div>
                         Coluna de anuncios<br>(col-md-3)
@@ -187,9 +190,10 @@
                             <!--<img src="..." class="card-img-top" alt="...">-->
                             <img  src="img/${produtoI8.nomeImagem}" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>                      
-                                <p class="card-text">Some ${produto8.nomeExtenso} ${produto8.preco}</p>
-                                teste ${produto8Nome} apagar
+                                <h5 class="card-title"></h5>                      
+                                <p class="card-text">${produto8.nomeExtenso} ${produto8.preco}</p>
+                                <p class="card-text">R$ ${produto8.preco}</p>
+                                <!--teste dolar{produto8Nome} apagar-->
 
 
                                 <a href="VisualizarProduto?nome=${produto8Nome}" class="btn btn-primary">Ver</a>                              

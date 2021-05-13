@@ -75,12 +75,14 @@ public class PaginaPrincipal extends HttpServlet {
         String nome2 = "Sapatilha Preta Nobuck";
         String nome3 = "Sapatilha Dourada Viper Skin";
         String nome4 = "Sapatilha Prateada";
-        String nome5 = "testando";
-        String nome6 = "status";
+        String nome5 = "Sapatilha Verniz Vermelha";
+        String nome6 = "Mocassim Rosa Pelo Animal Print";
 //        String nome7 = "qualqeur";
-        String nome7 = "test7";
+//        String nome7 = "test7";
+        String nome7 = "Sapatilha Nobuck Rosa";
 //        String nome8 = "a";Segunda tentativa
-        String nome8 = "Segunda tentativa";
+//        String nome8 = "Segunda tentativa";
+        String nome8 = "Sapatilha Dourada Trançada";
         
         
         Produto produto = ProdutoDao.getProdutoPP(nome);
@@ -101,6 +103,7 @@ public class PaginaPrincipal extends HttpServlet {
         //teste para imagem//
         List<Imagem> listaImagens = ImagemDao.getImagem(nome8);
         Imagem imagens = listaImagens.get(0);
+        
 //        request.setAttribute("listaimagens", listaImagens);
         request.setAttribute("produtoI8",imagens);
         ///fim teste ////
@@ -125,10 +128,21 @@ public class PaginaPrincipal extends HttpServlet {
         request.setAttribute("produtoI4",imagens);
         request.setAttribute("produto4Nome",nome4); 
         
+        listaImagens = ImagemDao.getImagem(nome5);
+        imagens = listaImagens.get(0);
+        request.setAttribute("produtoI5",imagens);
+        request.setAttribute("produto5Nome",nome5); 
+        
+        listaImagens = ImagemDao.getImagem(nome6);
+        imagens = listaImagens.get(0);
+        request.setAttribute("produtoI6",imagens);
+        request.setAttribute("produto6Nome",nome6);
+        
         listaImagens = ImagemDao.getImagem(nome7);
         imagens = listaImagens.get(0);
         request.setAttribute("produtoI7",imagens);
-        
+        request.setAttribute("produto7Nome",nome7);
+        // 8 esta fora de ordem
         
         request.setAttribute("produto8",produto8);
         request.setAttribute("produto8Nome",nome8);       
