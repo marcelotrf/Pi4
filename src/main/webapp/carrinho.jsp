@@ -39,7 +39,7 @@
         </thead>
 
         <tbody>
-            ter que criar banco carrinho e salvar e listar as informacoes
+<!--            ter que criar banco carrinho e salvar e listar as informacoes-->
             <c:forEach var="produto" items="${listaCarrinho}">
                 <tr>                        
                     <td><img class="thumbnail" src="img/${produto.nomeImagem}"> ${produto.nome}</td>  
@@ -72,10 +72,18 @@
 
                             </button>
                             <!--botao lixeira-->
-                            <button type="button" class="btn btn-outline-danger border-dark btn-sm">
-                                <i class="fas fa-trash"></i>                          
+                            <!--<button type="button" class="btn btn-outline-danger border-dark btn-sm">-->
+                            <!--teste///////////////////-->
+                            <form action="Carrinho"method="POST"> 
+                                <button type="submit" class="btn btn-outline-danger border-dark btn-sm" name="lixo" value="lixo">
+                                    <!--esconder input e pegar nome produto-->
+                                    <input type="text" name="nome" value="${produto.nome}" hidden/><br/>
+                                    <!--<button name="subject" type="submit" value="fav_HTML">HTML</button>-->
+                                    <!--fim teste////////////////////////-->
+                                    <i class="fas fa-trash"></i>                          
 
-                            </button>
+                                </button>
+                            </form>
 
 
                         </div>
@@ -92,7 +100,7 @@
                             </b>
 
                         </h4> 
-                        <a class="btn btn-dark" href="PaginaPrincipal">Pagina principal teste</a>
+                        <a class="btn btn-dark" href="PaginaPrincipal">Pagina principal</a>
 
                     </td>
 
@@ -114,9 +122,10 @@
         <div class="col-md-6"> 
             <!--////////////// incluir cep////////////////////-->
             <div  style="margin-left: 100px;">
-                <h2>Endereço Entrega</h2><br/>
+                <!--<h2>Endereço Entrega</h2><br/>-->
+                <h2>Calcular Frete</h2><br/>
                 <!--CEP: <input type="text" id="cep" name="cep">-->    
-                <button onclick="endereco()">Obter endereço</button><br/><br/>
+                <!--<button onclick="endereco()">Obter endereço</button><br/><br/>-->
                 <!--<form action="AlterarQuantidadeCarrinho" method="POST">-->    
                 <form action="Carrinho" method="POST">  
                     CEP: <input type="text" id="cep" name="cep"> 
@@ -124,11 +133,12 @@
                     <input type="email" name="email" value="${email}" hidden/><br/>
 
                     <!--<p>Endereço de Faturamento </p>-->
-                    Logradouro: <input type="text" id="logradouro" name="logradouro" ><br/>
+                    
+<!--                    Logradouro: <input type="text" id="logradouro" name="logradouro" ><br/>
                     Bairo: <input type="text" id="logradouro2" name="bairro" readonly="true" >
                     Complemento: <input type="text" id="logradouro4" name="texto2" disabled><br/>
                     Localidade: <input type="text" id="logradouro5" name="cidade" ><br/>
-                    UF: <input type="text" id="logradouro6" name="uf" ><br/>
+                    UF: <input type="text" id="logradouro6" name="uf" ><br/>-->
                     <button type="submit">Calcular Frete </button><br/><br/>
 
                 </form>
@@ -144,15 +154,15 @@
                     <a href="#" class="text-decoration-none text-danger">R$</a>
                     <a href="#" class="text-decoration-none text-danger">${valorFrete}</a>
                     <br/>
-                     <br/>
-                     <p class="font-weight-bold text-decoration-none text-#020202">valor final</p> 
+                    <br/>
+                    <p class="font-weight-bold text-decoration-none text-#020202">valor final</p> 
                     <a href="#" class="text-decoration-none text-danger">R$</a>
                     <a href="#" class="text-decoration-none text-danger" id="preco">${valorFinal}</a>
                     <!--<span class="text-decoration-none text-danger" id="preco">R$dolar{produto.preco}</span>-->
                     <br/>
-                     <br/>
-                    <!--<a class="btn btn-dark" href="ListarCheckout?nome=${nome}">Comprar</a>-->                  
-                    <a class="btn btn-dark" href="Login">Login</a>                  
+                    <br/>
+                   <!--<a class="btn btn-dark" href="ListarCheckout?nome=${nome}">Comprar</a>-->                  
+                    <a class="btn btn-dark" href="login.jsp">Fazer Login</a>                  
 
                 </b>
 

@@ -114,9 +114,22 @@ public class ListarCheckout extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         String email = request.getParameter("email");
+        //receber tipo pagamento
+        String pagamento = request.getParameter("pagamento");
+        
+        ////////////////////// endereco entrega/////////////////////////
+        String logradouro = request.getParameter("logradouro");
+        String cidade = request.getParameter("cidade");
+        String uf = request.getParameter("uf");
+        String cep = request.getParameter("cep");
+        request.setAttribute("logradouro", logradouro);
+        request.setAttribute("cidade", cidade);
+        request.setAttribute("uf", uf);
+        request.setAttribute("cep", cep);        
+        //////////////// fim endereco entrega////////////////////
+        
         // procurar nome comprador
-        Comprador comprador = CompradorDao.getComprador(email);
-        // adicionar nome na lista do carrinho em aberto        
+        Comprador comprador = CompradorDao.getComprador(email);            
 
         // adicionar lista percorrer somente aberto o status
         List<CarrinhoE> listaCarrinho = CarrinhoDao.getProdutoCarrinho();
@@ -129,8 +142,18 @@ public class ListarCheckout extends HttpServlet {
         request.setAttribute("valorFinal", valorFinal);
 
 //            request.setAttribute("email", email);
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/boletoFinalizar.jsp");
-        rd.forward(request, response);
+        if(pagamento.equals("boleto"))
+        {
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/boletoFinalizar.jsp");
+            rd.forward(request, response);            
+        }
+        else
+        {
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/cartaoCreditoFinalizar.jsp");
+            rd.forward(request, response); 
+        }
+            
+        
     }
 
     /**

@@ -20,10 +20,13 @@
             <p>Email</p>
             <input type="email" name="email"/><br/>
             <p>Senha</p>
-            <input type="password" name="senha"/><br/>            
-            <button type="submit">Cancelar</button>
-            <button type="submit">Cadastrar ir Imagens</button>
+            <input type="password" name="senha"/><br/>   <br/>          
+            <!--<button type="submit">Cancelar</button>-->
+            <button type="submit">Logar</button><br/> 
         </form>
-        <a href="cadastrarUsuario" class="btn btn-primary">Cadastrar</a>   
+        <br/> 
+        <a href="cadastrarUsuario.jsp" class="btn btn-primary">Cadastrar</a> <br/> <br/> 
+        <a href="PaginaPrincipal" class="btn btn-primary" style="margin-top: 100px;">voltar para pagina principal</a><br/> <br/> 
+        
     </body>
 </html>

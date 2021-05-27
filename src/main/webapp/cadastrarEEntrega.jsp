@@ -34,7 +34,9 @@
             <!--<form action="CepServlet" method="POST">-->
             <p>Endereço de Faturamento </p>
             <!--            CEP: <input type="text" id="cep"><br/>-->
-            Logradouro: <input type="text" id="logradouro" name="logradouro" ><br/>
+            Logradouro: <input type="text" id="logradouro" name="logradouro" >
+            Número: <input type="text" id="numeroL" name="numeroL">
+            <br/>
             Bairo: <input type="text" id="logradouro2" name="bairro" readonly="true" >
             <!--<button type="submit">Enviar</button>-->    
             <!--</form>-->
@@ -47,6 +49,7 @@
             Complemento: <input type="text" id="logradouro4" name="texto2" disabled><br/>
             <!--Bairo: <input type="text" id="logradouro2" name="texto3" disabled>-->
             <!--Localidade: <input type="text" id="logradouro5" name="cidade" disabled><br/>-->
+            Cep: <input type="text" id="cep" name="cep"><br/>   
             Localidade: <input type="text" id="logradouro5" name="cidade" ><br/>
             UF: <input type="text" id="logradouro6" name="uf" ><br/>
 

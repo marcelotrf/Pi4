@@ -19,6 +19,8 @@ public class Comprador
     String bairro;
     String cidade;
     String uf;  
+    String cep;
+    int numeroL;
     
                 
     public Comprador(String nome, String senha, String cpf, String email) {
@@ -48,14 +50,27 @@ public class Comprador
         this.cidade = cidade;
         this.uf = uf;
     }
-
-    public Comprador(String cpf, String logradouro, String bairro, String cidade, String uf) {
+//// alterado para colocar numeroL
+    public Comprador(String cpf, String logradouro, String bairro, String cidade, String uf, String cep, int numeroL) {
         this.cpf = cpf;
         this.logradouro = logradouro;
         this.bairro = bairro;
         this.cidade = cidade;
         this.uf = uf;
+        this.cep = cep;
+        this.numeroL = numeroL;
     }
+// adicionadoo numeroL para checkout
+    public Comprador(String logradouro, String bairro, String cidade, String uf, String cep, int numeroL) {
+        this.logradouro = logradouro;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.uf = uf;
+        this.cep = cep;
+        this.numeroL = numeroL;
+    }   
+
+      
     
     
     
@@ -125,5 +140,21 @@ public String getNome() {
     public void setUf(String uf) {
         this.uf = uf;
     }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public int getNumeroL() {
+        return numeroL;
+    }
+
+    public void setNumeroL(int numeroL) {
+        this.numeroL = numeroL;
+    }       
     
 }

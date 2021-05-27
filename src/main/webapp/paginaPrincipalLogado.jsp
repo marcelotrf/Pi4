@@ -20,13 +20,23 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
         <!--<h1>Hello World!</h1>-->
-        <h1>Tela do produto5 ${nome} e ${img} </h1>
+        <h1>Tela Principal </h1>
+        <div class="col-md-12"><br></div>        
         <div class="row">
-            <div class="col-md-12">Cabecalho<br>(col-md-12)</div>
-            <!--<h1>Hello World!</h1>-->
-            <div class="d-flex justify-content-between">
-                <div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/IMG_4594.JPG" class="img-fluid" alt="Texto alternativo(alt)"></div>
+            <!--divisão do logo-->
+            <div class="col-md-4">
+                <!--<h1>Hello World!</h1>-->
+                <div class="d-flex justify-content-between">
+                    <div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>
+                    <!--<div ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>-->
+                </div>
+            </div>
+            <!--barra de pesquisa-->
+            <div class="col-md-4">
                 <div class="w-50 p-3" class="d-flex justify-content-betweent"><input type="text" class="form-control" placeholder="Search"></div>
+            </div>
+            <!--menu nav bar--> 
+            <div class="col-md-4">
                 <!--teste nav bar login-->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <!--<a class="navbar-brand" href="#">Navbar</a>-->
@@ -35,85 +45,97 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
+
                             <!--                            <li class="nav-item active">
                                                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                                                         </li>-->
-                            <!--                            <li class="nav-item">
-                                                            <a class="nav-link" href="#">Features</a>
-                                                        </li>-->
+                            <!--                                                        <li class="nav-item">
+                                                                                        <a class="nav-link" href="#">Features</a>
+                                                                                    </li>-->
                             <!--                            <li class="nav-item">
                                                             <a class="nav-link" href="#">Pricing</a>
                                                         </li>-->
                             <li class="nav-item dropdown">
+
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     ${nome}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <!--<a class="dropdown-item" href="cadastrarComprador.jsp">Meu cadastro</a> apgaar se der certo-->
                                     <a class="dropdown-item" href="AlterarComprador?email=${nome}">Meu cadastro</a>
+                                    <a class="dropdown-item" href="ListarPedidosComprador?email=${nome}">Histórico de Pedidos</a>
                                     <!--teste so exemplo-->
                                     <!--<td><a href="AlterarFuncionario?nome=dolar{funcionario.nome}">Alterar</a></td>-->
                                     <!--fim teste-->
                                     <a class="dropdown-item" href="PaginaPrincipal">Sair</a>
                                     <!--<a class="dropdown-item" href="#">Something else here</a>-->
                                 </div>
+                            </li>                            
+                            <li class="nav-item active">
+                                <a class="nav-link" href="Carrinho?email=${nome}&nomeProduto=${produtoNome}">Carrinho <span class="sr-only">(current)</span></a>
                             </li>
+
                         </ul>
                     </div>
                 </nav>
-                <!--fim teste login-->
-                <div class="p-2 flex-fill bd-highlight"><span class="glyphicon glyphicon-search"></span></div>
             </div>
-            <!--outro teste-->
-            <!--<img src="img/IMG_4594.JPG" class="img-fluid" width: 10%; alt="Texto alternativo(alt)">-->
-
-            <!--            <form class="navbar-form navbar-left" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search">
-                            </div>
-                            <button type="submit" class="btn btn-default">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </form>-->
+            <!--fim teste login-->
+            <!--            nao funciona linha abaixo
+                        <div class="p-2 flex-fill bd-highlight"><span class="glyphicon glyphicon-search"></span></div>-->
         </div>
+        <!--outro teste-->
+        <!--<img src="img/IMG_4594.JPG" class="img-fluid" width: 10%; alt="Texto alternativo(alt)">-->
+
+        <!--            <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </form>-->
+        <!--</div>-->
+
         <div class="row">
             <div class="col-md-6"> 
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 1</label>
+                    <label class="custom-control-label" for="customCheck1">Categoria 1</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 2</label>
+                    <label class="custom-control-label" for="customCheck1">Categoria 2</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 3</label>
+                    <label class="custom-control-label" for="customCheck1">Categoria 3</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 4</label>
+                    <label class="custom-control-label" for="customCheck1">Categoria 4</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 5</label>
+                    <label class="custom-control-label" for="customCheck1">Categoria 5</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 6</label>
+                    <label class="custom-control-label" for="customCheck1">Categoria 6</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 7</label>
+                    <label class="custom-control-label" for="customCheck1">Categoria 7</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 8</label>
+                    <label class="custom-control-label" for="customCheck1">Categoria 8</label>
                 </div>                
-                Coluna de anuncios<br>(col-md-6)
-            </div>                
+
+            </div> 
+            <!--apresentações dos cards dos produtos-->
             <div class="col-md-6">
                 <div class="row">
+                    <!--primeiro produto-->
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
                             <img src="img/${produtoI.nomeImagem}" class="card-img-top" alt="...">
@@ -125,103 +147,118 @@
                                 <!--                                <a href="login.jsp" class="btn btn-primary">Login</a>-->
                                 <!--<a href="VisualizarProduto?nome=dolar{produtoNome}" class="btn btn-primary">Ver</a>--> 
                                 <!--teste apagar linha abaixo--> 
-                                <a href="Carrinho?email=${nome}&nomeProduto=${produtoNome}" class="btn btn-primary">Carrinho de compra</a>                                 
+                                <!--<a href="Carrinho?email=${nome}&nomeProduto=${produtoNome}" class="btn btn-primary">Carrinho de compra</a>--> 
+                                <a href="VisualizarProduto?nome=${produtoNome}" class="btn btn-primary">Ver</a> 
+                                <a href="Carrinho?email=${nome}&nomeProduto=${produtoNome}" class="btn btn-primary">Comprar</a>                                 
                                 <!--<a href="login.jsp">Login</a>-->
                                 <!--<a href="" class="btn btn-primary">Go 2</a>-->
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
-
+                        <!--segundo produto-->
                     </div>
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="img/${produtoI2.nomeImagem}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title"></h5>
                                 <p class="card-text">${produto2.nomeExtenso} ${produto2.preco}</p>
-                                <a href="#" class="btn btn-primary">Ver</a>
+                                <a href="VisualizarProduto?nome=${produto2Nome}" class="btn btn-primary">Ver</a> 
+                                <a href="Carrinho?email=${nome}&nomeProduto=${produto2Nome}" class="btn btn-primary">Comprar</a> 
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+                        
                     </div>
+                    <!--terceiro produto-->
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="img/${produtoI3.nomeImagem}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title"></h5>
                                 <p class="card-text">${produto3.nomeExtenso} ${produto3.preco}</p>
-                                <a href="#" class="btn btn-primary">Ver</a>
+                                <a href="VisualizarProduto?nome=${produto3Nome}" class="btn btn-primary">Ver</a> 
+                                <a href="Carrinho?email=${nome}&nomeProduto=${produto3Nome}" class="btn btn-primary">Comprar</a>
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+                        
                     </div>
+                            <!--quarto produto-->
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="img/${produtoI4.nomeImagem}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title"></h5>
                                 <p class="card-text">${produto4.nomeExtenso} ${produto4.preco}</p>
-                                <a href="#" class="btn btn-primary">Ver</a>
+                                <a href="VisualizarProduto?nome=${produto4Nome}" class="btn btn-primary">Ver</a> 
+                                <a href="Carrinho?email=${nome}&nomeProduto=${produto4Nome}" class="btn btn-primary">Comprar</a>
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+                        
                     </div>
                 </div>
                 <div class="row">
+                    <!--quinto produto-->
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="img/${produtoI5.nomeImagem}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title"></h5>
                                 <p class="card-text">${produto5.nomeExtenso} ${produto5.preco}</p>
-                                <a href="#" class="btn btn-primary">Ver</a>
+                                <a href="VisualizarProduto?nome=${produto5Nome}" class="btn btn-primary">Ver</a> 
+                                <a href="Carrinho?email=${nome}&nomeProduto=${produto5Nome}" class="btn btn-primary">Comprar</a>
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+                        
                     </div>
+                            <!--sexto produto-->
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="img/${produtoI6.nomeImagem}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
+                                <h5 class="card-title"></h5>
                                 <p class="card-text">${produto6.nomeExtenso} ${produto6.preco}</p>
-                                <a href="#" class="btn btn-primary">Ver</a>
+                                <a href="VisualizarProduto?nome=${produto6Nome}" class="btn btn-primary">Ver</a> 
+                                <a href="Carrinho?email=${nome}&nomeProduto=${produto6Nome}" class="btn btn-primary">Comprar</a>
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+                        
                     </div>
+                            <!--setimo produto-->
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
+                            <!--<img src="img/${produtoI7.nomeImagem}" class="card-img-top" alt="...">-->
                             <img src="img/${produtoI7.nomeImagem}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick ${produto7.nomeExtenso} ${produto7.preco}</p>
-                                <a href="#" class="btn btn-primary">Ver</a>
+                                <h5 class="card-title"></h5>
+                                <p class="card-text">${produto7.nomeExtenso} ${produto7.preco}</p>
+                                <a href="VisualizarProduto?nome=${produto7Nome}" class="btn btn-primary">Ver</a> 
+                                <a href="Carrinho?email=${nome}&nomeProduto=${produto7Nome}" class="btn btn-primary">Comprar</a>
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+                        
                     </div>
+                            <!--oitavo produto-->
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
                             <!--<img src="..." class="card-img-top" alt="...">-->
+                            <!--<img  src="img/${produtoI8.nomeImagem}" class="card-img-top">-->
                             <img  src="img/${produtoI8.nomeImagem}" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>                      
-                                <p class="card-text">Some ${produto8.nomeExtenso} ${produto8.preco}</p>
-                                teste ${produto8Nome} apagar
-
-
-                                <a href="VisualizarProduto?nome=${produto8Nome}" class="btn btn-primary">Ver</a>                              
+                                <h5 class="card-title"></h5>                      
+                                <p class="card-text">${produto8.nomeExtenso} ${produto8.preco}</p>
+                                <a href="VisualizarProduto?nome=${produto8Nome}" class="btn btn-primary">Ver</a> 
+                                <a href="Carrinho?email=${nome}&nomeProduto=${produto8Nome}" class="btn btn-primary">Comprar</a>                             
                             </div>
-                        </div>
-                        Coluna de anuncios<br>(col-md-3)
+                        </div>                       
                     </div>
                 </div>
             </div>                
         </div>
 
+                            
+                            
+                            <!--apagar tudo para baixo-->
         <!--teste nav bar login-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -242,11 +279,11 @@
                             ${nome}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <!--<a class="dropdown-item" href="cadastrarComprador.jsp">Meu cadastro</a> apgaar se der certo-->
+                            <a class="dropdown-item" href="cadastrarComprador.jsp">Meu cadastro</a> apgaar se der certo
                             <a class="dropdown-item" href="AlterarComprador?email=${nome}">Meu cadastro</a>
-                            <!--teste so exemplo-->
-                            <!--<td><a href="AlterarFuncionario?nome=dolar{funcionario.nome}">Alterar</a></td>-->
-                            <!--fim teste-->
+                            teste so exemplo
+                            <td><a href="AlterarFuncionario?nome=dolar{funcionario.nome}">Alterar</a></td>
+                            fim teste
                             <a class="dropdown-item" href="PaginaPrincipal">Sair</a>
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
@@ -254,11 +291,11 @@
                 </ul>
             </div>
         </nav>
-        <!--fim teste login-->
+        fim teste login
 
         <div class="row">
             <div class="col-md-12">Primeira linha<br>(col-md-12)
-                <!--<form action="CadastrarImagem"method="POST" >-->
+                <form action="CadastrarImagem"method="POST" >
                 <form>
                     <div class="form-group row">
                         <label for="inputEmail3" class="col-sm-2 col-form-label">Caminho arquivo Upload</label>
@@ -269,9 +306,9 @@
                     <input type="checkbox" name="imagemPrincipal" value="C">Imagem da Pagina Principal <br/>
                     <button type="submit" class="btn btn-primary">Upload</button>                    
                 </form>
-                <!--                <form action="CadastrarImagem"method="POST">  
+                                <form action="CadastrarImagem"method="POST">  
                                     <button type="submit" class="btn btn-primary">Upload</button>                      
-                                </form>-->
+                                </form>
             </div>
 
         </div>
@@ -288,13 +325,13 @@
                     </c:forEach> 
 
 
-                    <!--                    <input type="checkbox" name="imagem" value="C">Imagem 1 
+                                        <input type="checkbox" name="imagem" value="C">Imagem 1 
                                         <input type="checkbox" name="imagem" value="C">Imagem 2 
                                         <input type="checkbox" name="imagem" value="C">Imagem 3 
-                                        <input type="checkbox" name="imagem" value="C">Imagem 4                -->
+                                        <input type="checkbox" name="imagem" value="C">Imagem 4                
                 </div>
                 <div class="col-md-6">imagens linha(col-md-6)
-                    <!--                    <div id="slide-wrapper">
+                                        <div id="slide-wrapper">
                                             <img id="slideLeft" class="arrow" src="img/Left arrow.png">
                                             <div id="slider">
                                                 
@@ -313,13 +350,13 @@
                                             </div>
                                             <img id="slideRight" class="arrow" src="img/Right arrow.png">
                                             <button type="submit" class="btn btn-primary">Remover Selecionados</button>            
-                                        </div>-->
+                                        </div>
                 </div>            
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Concluir Cadastro Produto</button> 
 
-        <!--        <div class="container">
+                <div class="container">
                     <br><br>
                     <h1 style="text-align:center;">Javascript Image Gallery</h1>
                     3 minuto o style acima
@@ -337,7 +374,7 @@
         
                     </div>
         
-                </div>-->
+                </div>
 
         <form id="form" enctype="multipart/form-data">
             <div class="form-group">
@@ -347,7 +384,7 @@
                 <button class="btn btn-primary">Upload</button>
             </div>
         </form>
-        <!--<div  id="result"></div>-->
+        <div  id="result"></div>
         <button onclick="remove()" class="btn btn-danger">Remove</button> 
 
 
@@ -357,39 +394,39 @@
 
 
 
-                <!--<img src="img/IMG_4594.JPG">-->                    
+                <img src="img/IMG_4594.JPG">                    
 
-                <!--                <form id="form" enctype="multipart/form-data">
+                                <form id="form" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <input type="file" class="form-control" id="image">
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-primary">Upload</button>
                                     </div>
-                                </form>-->
-                <!--<button onclick="remove()" class="btn btn-danger">Remove</button>-->            
+                                </form>
+                <button onclick="remove()" class="btn btn-danger">Remove</button>            
                 <div  id="result"></div>
 
 
 
 
-                <!--<!--ta estranho o i em cima-- 2 minuto de video>-->
+                <!--ta estranho o i em cima-- 2 minuto de video>
 
-                <!--o input e botao padrao que abre pasta documentos-->
+                o input e botao padrao que abre pasta documentos
 
 
 
-                <!--                <img class="thumbnail active" src="img/IMG_4594.JPG">
+                                <img class="thumbnail active" src="img/IMG_4594.JPG">
                 
                                 <img class="thumbnail" src="img/Lavadora de Roupas Ex2.jpg">
-                                <img class="thumbnail" src="img/Lavadora de Roupas Ex3.jpg">-->
-                <!--                <img class="thumbnail" src="img/IMG_5328.JPG">
+                                <img class="thumbnail" src="img/Lavadora de Roupas Ex3.jpg">
+                                <img class="thumbnail" src="img/IMG_5328.JPG">
                                 <img class="thumbnail" src="img/IMG_5326.JPG">
-                                <img class="thumbnail" src="img/IMG_5328.JPG">-->
+                                <img class="thumbnail" src="img/IMG_5328.JPG">
             </div>
             <img id="slideRight" class="arrow" src="img/Right arrow.png">
-            <button type="submit" class="btn btn-primary">Remover Selecionados</button>            
-        </div>
+            <button type="submit" class="btn btn-primary">Remover Selecionados</button>            -->
+        <!--</div>-->
 
         <script type="text/javascript">
             let thumbnails = document.getElementsByClassName('thumbnail')
@@ -407,7 +444,7 @@
                     }
 
                     this.classList.add('active')
-//                    document.getElementById('featured').src = this.src
+                    //                    document.getElementById('featured').src = this.src
 
                 })
 
@@ -445,7 +482,7 @@
                     if (this.result && localStorage)
                     {
                         window.localStorage.setItem(name, this.result)
-//                        alert("image stored in local storage")
+                        //                        alert("image stored in local storage")
                         parentDiv.innerHTML = ''
                         showImages()
                     } else
@@ -483,7 +520,7 @@
 
         </script>
 
-        const file = this.files[0];
+<!--        const file = this.files[0];
         if (file) {
         const reader = new FileReader();
         reader.onload = function () {
@@ -496,7 +533,7 @@
         wrapper.classList.remove("active");
 
         })
-        reader.readAsDataURL(file);
+        reader.readAsDataURL(file);-->
 
     </body>
 </html>

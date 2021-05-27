@@ -155,15 +155,15 @@
                                 <input type="text" id="email" name="email" placeholder="john@example.com" value="${comprador.email}" readonly="true">
 
                                 <label for="adr"><i class="fa fa-address-card-o"></i> Endereço</label>
-                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" value="${comprador.logradouro}" readonly="true">
+                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" value="${logradouro}" readonly="true">
 
                                 <label for="city"><i class="fa fa-institution"></i> Cidade</label>
-                                <input type="text" id="city" name="city" placeholder="New York"value="${comprador.cidade}" readonly="true">
+                                <input type="text" id="city" name="city" placeholder="New York"value="${cidade}" readonly="true">
 
                                 <div class="row">
                                     <div class="col-50">
                                         <label for="state">Uf</label>
-                                        <input type="text" id="state" name="state" placeholder="NY" value="${comprador.uf}" readonly="true">
+                                        <input type="text" id="state" name="state" placeholder="NY" value="${uf}" readonly="true">
                                     </div>
                                     <div class="col-50">
                                         <label for="zip">Cep</label>
@@ -233,7 +233,7 @@
                 <!--decidir aonde por botao-->
                 <!--nome do servlet aproveitado-->
                 <form action="AlterarQuantidadeCarrinho" method="POST">
-                <a href="PaginaPrincipal" class="btn btn-primary" style="margin-top: 100px;">Nãp Finalizar Compra</a>
+                <a href="PaginaPrincipal" class="btn btn-primary" style="margin-top: 100px;">Não Finalizar Compra</a>
                 <button type="submit">Finalizar Compra </button><br/><br/>
                 </form>
             </div> 
@@ -246,7 +246,7 @@
                     <h3 class="card-title text-center" style="width: 306px;">Pagamento com Boleto</h3>
                     <div class="row">
                         <div class="col-50" >
-                            <p class="bolet"><a href="#" ><i class="fas fa-barcode fa-9x " style="color: black" ></i> </a></p>                                      
+                            <p class="boleto"><a href="#" ><i class="fas fa-barcode fa-9x " style="color: black; margin-left: -174px;" ></i> </a></p>                                      
                             <!--<h3 class="card-text">Boleto</h3>-->
                         </div>
                     </div>

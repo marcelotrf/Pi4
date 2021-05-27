@@ -76,8 +76,11 @@
         <form>   
             <p>Endereço de Entrega </p>
             <!--dolar{enderecoE.logradouro}-->
-            Logradouro: <input type="text" id="logradouro" name="logradouro" value="${enderecoE.logradouro}"><br/>            
+            Logradouro: <input type="text" id="logradouro" name="logradouro" value="${enderecoE.logradouro}">
+            Número: <input type="text" id="numeroL" name="numeroL" value="${enderecoE.numeroL}">
+            <br/>            
             Bairo: <input type="text" id="logradouro2" name="texto3" readonly="true" value="${enderecoE.bairro}"><br/>           
+            Cep: <input type="text" id="cep" name="cep" readonly="true" value="${enderecoE.cep}"><br/>           
             
             Localidade: <input type="text" id="logradouro5" name="texto4" disabled value="${enderecoE.cidade}"><br/>
             UF: <input type="text" id="logradouro6" name="texto5" disabled value="${enderecoE.uf}"><br/>

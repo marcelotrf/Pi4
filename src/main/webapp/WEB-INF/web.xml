@@ -89,6 +89,30 @@
         <servlet-name>ListarCheckout</servlet-name>
         <servlet-class>servelet.ListarCheckout</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListarEnderecoEntrega</servlet-name>
+        <servlet-class>servelet.ListarEnderecoEntrega</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarPedido</servlet-name>
+        <servlet-class>servelet.ListarPedido</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AlterarStatusPedido</servlet-name>
+        <servlet-class>servelet.AlterarStatusPedido</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarPedidosComprador</servlet-name>
+        <servlet-class>servelet.ListarPedidosComprador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RetornarPPLogado</servlet-name>
+        <servlet-class>servelet.RetornarPPLogado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VisualizarDetalhesPedido</servlet-name>
+        <servlet-class>servelet.VisualizarDetalhesPedido</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastrarProduto</servlet-name>
         <url-pattern>/CadastrarProduto</url-pattern>
@@ -172,6 +196,30 @@
     <servlet-mapping>
         <servlet-name>ListarCheckout</servlet-name>
         <url-pattern>/ListarCheckout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarEnderecoEntrega</servlet-name>
+        <url-pattern>/ListarEnderecoEntrega</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarPedido</servlet-name>
+        <url-pattern>/ListarPedido</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarStatusPedido</servlet-name>
+        <url-pattern>/AlterarStatusPedido</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarPedidosComprador</servlet-name>
+        <url-pattern>/ListarPedidosComprador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RetornarPPLogado</servlet-name>
+        <url-pattern>/RetornarPPLogado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VisualizarDetalhesPedido</servlet-name>
+        <url-pattern>/VisualizarDetalhesPedido</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

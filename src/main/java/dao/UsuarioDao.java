@@ -328,5 +328,31 @@ public class UsuarioDao
          return false;
         
     }
+       
+       public static Usuario getTipoUsuario(String email)
+    {
+        // declarar o retorno
+        Usuario funcionario = null;
+         try {
+                Connection con = ConexaoBD.getConexao();
+//                cuidado com nome repetido
+                String query = "select * from usuario where email=?";
+                PreparedStatement ps = con.prepareStatement(query);
+                ps.setString(1, email);
+                ResultSet rs = ps.executeQuery();
+                if(rs.next())
+                {                    
+                    String nome = rs.getString("nome");               
+                    String tipo = rs.getString("tipo");
+                    funcionario = new Usuario(nome,tipo,email);                    
+                }                    
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(ListarFuncionario.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(ListarFuncionario.class.getName()).log(Level.SEVERE, null, ex);
+            }
+         return funcionario;
+        
+    }
     
 }

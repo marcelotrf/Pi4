@@ -12,8 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        seu pedido ${pedido}
+        <h1>Seu pedido é o número ${pedido}</h1>
+        
         <a class="btn btn-dark" href="PaginaPrincipal">Pagina principal</a>
     </body>
 </html>

@@ -95,10 +95,16 @@ request.setAttribute("email", email);
         String logradouro = request.getParameter("logradouro");        
         String bairro = request.getParameter("bairro");        
         String cidade = request.getParameter("cidade");        
-        String uf = request.getParameter("uf");            
+        String uf = request.getParameter("uf");     
+//        falta colocar cep la na tela do jsp
+        String cep = request.getParameter("cep"); 
+        ///////adicionar numero casa//////////
+        String numeroStr = request.getParameter("numeroL");
+//        converter string para int 
+        int numeroL = Integer.parseInt(numeroStr);
         
 //        Criar informacoes recebidas em uma lista e adicionar para a classe produto
-        Comprador enderecoEntrega = new Comprador(cpf,logradouro,bairro,cidade,uf);        
+        Comprador enderecoEntrega = new Comprador(cpf,logradouro,bairro,cidade,uf,cep,numeroL);        
         try {
             CompradorDao.addEnderecoEntrega(enderecoEntrega);
 //            redirecionar para uma pagina de confirmação

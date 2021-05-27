@@ -48,6 +48,14 @@ public class CarrinhoE
         this.valorTotal = valorTotal;        
         this.valorFinal = valorFinal;        
     }
+
+    public CarrinhoE(int numeroOrdem, double valorTotal, String statusOrdem) {
+        this.numeroOrdem = numeroOrdem;
+        this.valorTotal = valorTotal;
+        this.statusOrdem = statusOrdem;
+    }
+    
+    
     
     
     

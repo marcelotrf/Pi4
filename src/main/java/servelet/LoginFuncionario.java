@@ -6,6 +6,7 @@
 package servelet;
 
 import dao.UsuarioDao;
+import entidade.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -71,7 +72,7 @@ public class LoginFuncionario extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {        
+            throws ServletException, IOException {
         String username = request.getParameter("email");
         String senha = request.getParameter("senha");
         // encryptar para ver se bate no banco
@@ -90,22 +91,46 @@ public class LoginFuncionario extends HttpServlet {
         // apagar teste
 
         if (usuario == true) {
+
 //            por enquanto passando email
             request.setAttribute("nome", username);
-            // teste quando for usuario normal
+/////////////////////teste para pegar tipo do usuario //////////////////////////////
+            Usuario tipo = UsuarioDao.getTipoUsuario(username);
+            // se o usuario for admministrador vai para tela indexadmin senao vai para estoquista
+            if (tipo.getTipo().equals("Administrador")) {
+                RequestDispatcher rd
+                        = //            getServletContext().getRequestDispatcher("/index.jsp");
+                        //            teste nav bar
+                        getServletContext().getRequestDispatcher("/indexAdministrador.jsp");
+
+//fim do teste nav bar
+                rd.forward(request, response);
+
+            } else {
+                RequestDispatcher rd
+                        = //            getServletContext().getRequestDispatcher("/index.jsp");
+                        //            teste nav bar
+                        getServletContext().getRequestDispatcher("/indexEstoquista.jsp");
+
+//fim do teste nav bar
+                rd.forward(request, response);
+
+//////////////////////fim do teste /////////////////////////////////
+//            request.setAttribute("nome", username);
+                // teste quando for usuario normal
 //            RequestDispatcher rd =
 ////            getServletContext().getRequestDispatcher("/index.jsp");
 ////            teste nav bar
 //            getServletContext().getRequestDispatcher("/cadastrarImagens4.jsp");
-            // levar funcionario para indexAdministrador//
-            RequestDispatcher rd
-                    = //            getServletContext().getRequestDispatcher("/index.jsp");
-                    //            teste nav bar
-                    getServletContext().getRequestDispatcher("/indexAdministrador.jsp");
-
-//fim do teste nav bar
-            rd.forward(request, response);
-
+                // levar funcionario para indexAdministrador//
+//                RequestDispatcher rd
+//                        = //            getServletContext().getRequestDispatcher("/index.jsp");
+//                        //            teste nav bar
+//                        getServletContext().getRequestDispatcher("/indexAdministrador.jsp");
+//
+////fim do teste nav bar
+//                rd.forward(request, response);
+            }
         } else {
             RequestDispatcher rd
                     = getServletContext().getRequestDispatcher("/cadastrarProduto.jsp");

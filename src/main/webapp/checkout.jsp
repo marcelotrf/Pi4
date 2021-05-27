@@ -126,31 +126,69 @@
                     <form action="/action_page.php">
 
                         <div class="row">
-                            <div class="col-50">
-                                <h3>Endereço de cobrança</h3>
-                                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                            <!--////////////////// teste para colocar endereco de entrega//////////////////////-->
+                            <div class="col-50">                         
+                                <h3>Endereço de entrega</h3>
+                                <label for="fname"><i class="fa fa-user"></i> Nome Completo</label>
                                 <input type="text" id="fname" name="firstname" placeholder="John M. Doe" value="${comprador.nome}">
 
                                 <label for="email"><i class="fa fa-envelope"></i> Email</label>
                                 <input type="text" id="email" name="email" placeholder="john@example.com" value="${comprador.email}">
 
-                                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" value="${comprador.logradouro}">
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="adr"><i class="fa fa-address-card-o"></i> Endereço</label>
+                                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" value="${enderecoE.logradouro}">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="zip">Número</label>
+                                        <input type="text" id="zip" name="zip" placeholder="101" value="${enderecoE.numeroL}">
+                                    </div>
+                                </div>
 
-                                <label for="city"><i class="fa fa-institution"></i> City</label>
-                                <input type="text" id="city" name="city" placeholder="New York"value="${comprador.cidade}">
+
+                                <label for="city"><i class="fa fa-institution"></i> Cidade</label>
+                                <input type="text" id="city" name="city" placeholder="New York"value="${enderecoE.cidade}">
 
                                 <div class="row">
                                     <div class="col-50">
-                                        <label for="state">State</label>
-                                        <input type="text" id="state" name="state" placeholder="NY" value="${comprador.uf}">
+                                        <label for="state">Estado</label>
+                                        <input type="text" id="state" name="state" placeholder="NY" value="${enderecoE.uf}">
                                     </div>
                                     <div class="col-50">
-                                        <label for="zip">Zip</label>
-                                        <input type="text" id="zip" name="zip" placeholder="10001" value="${cep}">
+                                        <label for="zip">CEP</label>
+                                        <input type="text" id="zip" name="zip" placeholder="10001" value="${enderecoE.cep}">
                                     </div>
                                 </div>
                             </div>
+                            <!--//////////////fim teste//////////////////////////////////////////-->
+                            <!--                            <div class="col-50">
+                                                            <h3>Endereço de cobrança</h3>
+                                                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe" value="${comprador.nome}">
+                            
+                                                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                                            <input type="text" id="email" name="email" placeholder="john@example.com" value="${comprador.email}">
+                            
+                                                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" value="${comprador.logradouro}">
+                            
+                                                            <label for="city"><i class="fa fa-institution"></i> City</label>
+                                                            <input type="text" id="city" name="city" placeholder="New York"value="${comprador.cidade}">
+                            
+                                                            <div class="row">
+                                                                <div class="col-50">
+                                                                    <label for="state">State</label>
+                                                                    <input type="text" id="state" name="state" placeholder="NY" value="${comprador.uf}">
+                                                                </div>
+                                                                <div class="col-50">
+                                                                    <label for="zip">Zip</label>
+                                                                    <input type="text" id="zip" name="zip" placeholder="10001" value="${cep}">
+                                                                </div>
+                                                            </div>
+                                                        </div>-->
+                            <!--<button type="button" class="btn btn-outline-danger border-dark btn-sm" href="ListarEnderecoEntrega?email=dolar{comprador.email}">Alterar Endereço de Entrega</button>-->
+                            <a href="ListarEnderecoEntrega?email=${comprador.email}" class="btn btn-outline-danger border-dark btn-sm">Alterar Endereço de Entrega</a> 
                             <!--//////////////////////cartao////////////////////-->
                             <!--                            <div class="col-50">
                                                             <h3>Payment</h3>
@@ -277,33 +315,52 @@
         </div>
         <!--formas de pagametno////////////////////////////////-->
         <!--//tentar utilizar o post do listarchecout servlet-->
-        <form action="ListarCheckout" method="POST">
+        <!--<form action="ListarCheckout" method="POST">-->
 
 
-            <div class="card w-50 " style="top: 50px; left: 332px;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Escolha a forma de Pagamento</h5>
-                    <div class="row">
-                        <div class="col-50">
+        <div class="card w-50 " style="top: 50px; left: 332px;">
+            <div class="card-body">
+                <h5 class="card-title text-center">Escolha a forma de Pagamento</h5>
+                <div class="row">
+                    <!--<form action="ListarCheckout" method="POST">-->
+                    <div class="col-50">
+                        <form action="ListarCheckout" method="POST">
+
+
                             <p><a href="ListarCheckout" ><i class="fas fa-barcode fa-9x " style="color: black" ></i> </a> </p>                                      
-                            <h4 class="card-text">Boleto</h4>
-
-                        </div>
-                        <div class="col-50" style=" margin-top: -0.25rem !important;">
-                            <p><a href="#" ><i class="far fa-credit-card fa-9x" style="color: black"></i> </a> </p>  
-                            <!--<a class="btn btn-dark" href="ListarCheckout?email=${email}">Comprar</a>--> 
+                            <!--<h4 class="card-text">Boleto</h4>-->
                             <button type="submit">Boleto </button><br/><br/>
-                            <h4 class="card-text">Cartão de Crédito</h4>
-                            <input type="email" name="email" value="${comprador.email}" hidden/><br/>
+                        </form>
 
-                        </div>
                     </div>
+                    <!--</form>-->
+                    <!--<form action="ListarCheckout" method="POST">-->
+                    <div class="col-50" style=" margin-top: -0.25rem !important;">
+                        <form action="ListarCheckout" method="POST">
 
 
+                            <p><a href="#" ><i class="far fa-credit-card fa-9x" style="color: black"></i> </a> </p>  
+                            <button type="submit">Cartão de Crédito </button><br/><br/>
+                            <!--<a class="btn btn-dark" href="ListarCheckout?email=${email}">Comprar</a>--> 
+                            <!--<button type="submit">Boleto </button><br/><br/>-->
+                            <!--<h4 class="card-text">Cartão de Crédito</h4>-->
+                            <input type="email" name="email" value="${comprador.email}" hidden/><br/>
+                            <input type="text" name="logradouro" value="${enderecoE.logradouro}" hidden/><br/>
+                            <input type="text" name="cidade" value="${enderecoE.cidade}" hidden/><br/>
+                            <input type="text" name="uf" value="${enderecoE.uf}" hidden/><br/>
+                            <input type="text" name="cep" value="${enderecoE.cep}" hidden/><br/>
+                            <input type="text" name="pagamento" value="cartaoCredito" hidden/><br/>
 
+                        </form>
+                    </div>
+                    <!--</form>-->
                 </div>
+
+
+
             </div>
-        </form>
+        </div>
+        <!--</form>-->
         <!--fim do teste///////////////////////////////////////-->
 
         <a href="PaginaPrincipal" class="btn btn-primary" style="margin-top: 100px;">voltar para algum lugar</a>

@@ -43,10 +43,10 @@
             <!--            <button type="submit">Cancelar</button>-->            
             <button type="submit">Cadastrar Funcionário</button><br/><br/>
             <!--lembrar de levar o nome do produto-->
-            <a href="CadastrarImagens.jsp?nome=${produto.nome}" class="btn btn-primary">Cadastrar oficial</a>
+            <!--<a href="CadastrarImagens.jsp?nome=${produto.nome}" class="btn btn-primary">Cadastrar oficial</a>-->
             <!--teste-->
             ${nome}
-            <a href="CadastrarImagem?nome=${nome}">Cadastrar ir Imagens correto ${nome}</a><br/><br/>
+            <!--<a href="CadastrarImagem?nome=${nome}">Cadastrar ir Imagens correto ${nome}</a><br/><br/>-->
             <!--<a href="CadastrarImagem?nome=${nome}" class="btn btn-primary"></a>Cadastrar ir Imagens correto ${nome}<br/><br/>-->
 
 <!--<a href="CadastrarImagem?nome=${produto.nome} class="btn btn-primary">Imagem teste</a>-->

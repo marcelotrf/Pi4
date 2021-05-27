@@ -162,7 +162,7 @@ public class CompradorDao {
       public static void addEnderecoEntrega(Comprador comprador) throws SQLException, ClassNotFoundException
     {
         Connection con = ConexaoBD.getConexao();        
-        String query = "insert into enderecoentrega(cpf,logradouro,bairro,cidade,uf) values (?,?,?,?,?)";
+        String query = "insert into enderecoentrega(cpf,logradouro,bairro,cidade,uf,cep,numeroL) values (?,?,?,?,?,?,?)";
         PreparedStatement ps = con.prepareStatement(query);
 //        ps.setString(1, comprador.getNome());
 //        ps.setString(2, comprador.getSenha());
@@ -171,7 +171,8 @@ public class CompradorDao {
         ps.setString(3, comprador.getBairro());             
         ps.setString(4, comprador.getCidade());             
         ps.setString(5, comprador.getUf());             
-//        ps.setString(7, comprador.getEmail());         
+        ps.setString(6, comprador.getCep());             
+        ps.setInt(7, comprador.getNumeroL());         
         
         ps.execute();
         
@@ -197,7 +198,9 @@ public class CompradorDao {
                     String bairro = rs.getString("bairro");
                     String cidade = rs.getString("cidade");
                     String uf = rs.getString("uf");
-                    listaEnderecoE.add(new Comprador(cpf,logradouro,bairro,cidade,uf));  
+                    String cep = rs.getString("cep");
+                    int numeroL = rs.getInt("numeroL");
+                    listaEnderecoE.add(new Comprador(cpf,logradouro,bairro,cidade,uf,cep,numeroL));  
 //                    enderecoE = new Comprador(cpf,logradouro,bairro,cidade,uf);                    
                 }                    
             } catch (ClassNotFoundException ex) {
@@ -206,6 +209,43 @@ public class CompradorDao {
                 Logger.getLogger(ListarFuncionario.class.getName()).log(Level.SEVERE, null, ex);
             }
          return listaEnderecoE;
+        
+    }
+      
+      public static Comprador getEnderecoCep(String cep)
+    {
+        // declarar o retorno
+        Comprador comprador = null;
+//        List<Comprador> listaEnderecoE = new ArrayList();
+//        Comprador enderecoE = null;
+         try {
+                Connection con = ConexaoBD.getConexao();
+//                cuidado com nome repetido
+                String query = "select * from enderecoEntrega where cep=?";
+                PreparedStatement ps = con.prepareStatement(query);
+                ps.setString(1, cep);
+                ResultSet rs = ps.executeQuery();
+                // acho que while pega valor repetido, if pega so o primeiro
+                 if(rs.next())
+//                if(rs.next())
+                {                    
+                    String logradouro = rs.getString("logradouro");
+                    String bairro = rs.getString("bairro");
+                    String cidade = rs.getString("cidade");
+                    String uf = rs.getString("uf");
+                    int numeroL = rs.getInt("numeroL");
+                    //talvez de errado por causa do cep
+//                    listaEnderecoE.add(new Comprador(logradouro,bairro,cidade,uf,cep)); 
+                      comprador = new Comprador(logradouro,bairro,cidade,uf,cep,numeroL);   
+                   
+//                    enderecoE = new Comprador(cpf,logradouro,bairro,cidade,uf);                    
+                }                    
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(ListarFuncionario.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(ListarFuncionario.class.getName()).log(Level.SEVERE, null, ex);
+            }
+         return comprador;
         
     }
 

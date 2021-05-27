@@ -14,6 +14,7 @@ import entidade.Produto;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -147,26 +148,27 @@ public class Carrinho extends HttpServlet {
         // pegar o ultimo valor final da lista
         CarrinhoE valorFinalL = listaCarrinho.get(listaCarrinho.size() - 1);
         double valorFinal = valorFinalL.getValorFinal();
+        // teste para limitar 2 casas decimais
+        DecimalFormat df = new DecimalFormat("0.##");
+        String valorFinalS = df.format(valorFinal);
 
         request.setAttribute("listaCarrinho", listaCarrinho);
-        request.setAttribute("valorFinal", valorFinal);
+//        request.setAttribute("valorFinal", valorFinal);
+        request.setAttribute("valorFinal", valorFinalS);
         // mostrar na tela o request
-        
+
 //        verifica se comprador esta logado
-        
-        if(email!=null)
-        {
-            request.setAttribute("email", email); 
+        if (email != null) {
+            request.setAttribute("email", email);
             RequestDispatcher rd
                     = getServletContext().getRequestDispatcher("/carrinhoLogado.jsp");
             rd.forward(request, response);
 
+        } else {
+            RequestDispatcher rd
+                    = getServletContext().getRequestDispatcher("/carrinho.jsp");
+            rd.forward(request, response);
         }
-        else{
-        RequestDispatcher rd
-                = getServletContext().getRequestDispatcher("/carrinho.jsp");
-        rd.forward(request, response);
-                }
     }
 
     /**
@@ -180,12 +182,18 @@ public class Carrinho extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        String lixo = request.getParameter("lixo");
         String nome = request.getParameter("nome");
         String quantidadeStr = request.getParameter("quantidade");
         String cepStr = request.getParameter("cep");
 
+        if (lixo != null && !lixo.trim().isEmpty()) {
+            CarrinhoDao.ApagarItemCarrinho(nome);
+        }
+
         int cep = 0;
-        if (cepStr != null) {
+        if (cepStr != null && !cepStr.trim().isEmpty()) {
             cep = Integer.parseInt(cepStr);
             cep = CarrinhoDao.CalculoFrete(cep);
         }
@@ -205,18 +213,34 @@ public class Carrinho extends HttpServlet {
         }
 
         List<CarrinhoE> listaCarrinho = CarrinhoDao.getProdutoCarrinho();
-//        teste
-        CarrinhoE valorFinalL = listaCarrinho.get(listaCarrinho.size() - 1);
-        double valorFinal = valorFinalL.getValorFinal();
-        valorFinal = (double) valorFinal + cep;
+        if (listaCarrinho.isEmpty()) {
+//            request.setAttribute("valorFinal", valorFinalS);
+//        request.setAttribute("listaCarrinho", listaCarrinho);
+//        request.setAttribute("valorFrete", cep);
+            // mostrar na tela o request
+            RequestDispatcher rd
+                    = getServletContext().getRequestDispatcher("/carrinho.jsp");
+            rd.forward(request, response);
 
-        request.setAttribute("valorFinal", valorFinal);
-        request.setAttribute("listaCarrinho", listaCarrinho);
-        request.setAttribute("valorFrete", cep);
-        // mostrar na tela o request
-        RequestDispatcher rd
-                = getServletContext().getRequestDispatcher("/carrinho.jsp");
-        rd.forward(request, response);
+        } else {
+
+//        teste
+            CarrinhoE valorFinalL = listaCarrinho.get(listaCarrinho.size() - 1);
+            double valorFinal = valorFinalL.getValorFinal();
+            valorFinal = (double) valorFinal + cep;
+            /////////// 2 casa decimais
+            DecimalFormat df = new DecimalFormat("0.##");
+            String valorFinalS = df.format(valorFinal);
+
+//        request.setAttribute("valorFinal", valorFinal);
+            request.setAttribute("valorFinal", valorFinalS);
+            request.setAttribute("listaCarrinho", listaCarrinho);
+            request.setAttribute("valorFrete", cep);
+            // mostrar na tela o request
+            RequestDispatcher rd
+                    = getServletContext().getRequestDispatcher("/carrinho.jsp");
+            rd.forward(request, response);
+        }
     }
 
     /**

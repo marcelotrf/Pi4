@@ -44,7 +44,7 @@ public class LoginUsuario extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginUsuario</title>");            
+            out.println("<title>Servlet LoginUsuario</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet LoginUsuario at " + request.getContextPath() + "</h1>");
@@ -125,7 +125,6 @@ public class LoginUsuario extends HttpServlet {
 ////}
 //}
     //}
-
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -136,41 +135,37 @@ public class LoginUsuario extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException 
-    {
+            throws ServletException, IOException {
         ////////////////////////////fazer uma logica para ver se tem cpf e mandar para login funcionario//////////////////////
         String username = request.getParameter("email");
         String senha = request.getParameter("senha");
         // encryptar para ver se bate no banco
-        senha  = new String(UsuarioDao.encripitar(senha.getBytes())); 
-        
+        senha = new String(UsuarioDao.encripitar(senha.getBytes()));
+
 //        boolean usuario = UsuarioDao.verificaUsuario(username,senha);
-        boolean funcionario = UsuarioDao.verificaUsuarioFuncionario(username,senha);
+        boolean funcionario = UsuarioDao.verificaUsuarioFuncionario(username, senha);
         /// fazer login funcionario////
-        if(funcionario==true)
-        {
-            request.setAttribute("funcionarioJ",username);
-            request.setAttribute("funcionarioJ",senha);            
-            RequestDispatcher rd =
-            getServletContext().getRequestDispatcher("/LoginFuncionario"); 
-            rd.forward(request, response); 
-            
+        if (funcionario == true) {
+            request.setAttribute("funcionarioJ", username);
+            request.setAttribute("funcionarioJ", senha);
+            RequestDispatcher rd
+                    = getServletContext().getRequestDispatcher("/LoginFuncionario");
+            rd.forward(request, response);
+
         }
         // fazer login comprador
-        boolean usuario = CompradorDao.verificaUsuario(username,senha);
-        
-        if(usuario==true)
-        {
+        boolean usuario = CompradorDao.verificaUsuario(username, senha);
+
+        if (usuario == true) {
 //            por enquanto passando email
-             request.setAttribute("nome", username); 
-             // teste quando for usuario normal
+            request.setAttribute("nome", username);
+            // teste quando for usuario normal
 //     come       RequestDispatcher rd =
 ////            getServletContext().getRequestDispatcher("/index.jsp");
 ////            teste nav bar
-                    
+
 //         comen            getServletContext().getRequestDispatcher("/PaginaPrincipalLogado.jsp");
-            
-   ////////////////////////////                 // teste para colocar os dados na pagina principal com usuario logado//////////////
+            ////////////////////////////                 // teste para colocar os dados na pagina principal com usuario logado//////////////
 //                      String nomeX = request.getParameter("nome");
 //        String nome2 = request.getParameter("nome");
 //        String nome3 = request.getParameter("nome");
@@ -179,91 +174,112 @@ public class LoginUsuario extends HttpServlet {
 //        String nome6 = request.getParameter("nome");
 //        String nome7 = request.getParameter("nome");
 //        String nome8 = request.getParameter("nome");
-        String nome = "Mocassim Preto Strass";
-        String nome2 = "teste";
-        String nome3 = "cadastro de teste";
-        String nome4 = "nome novo";
-        String nome5 = "testando";
-        String nome6 = "status";
+            String nome = "Mocassim Preto Strass";
+//        String nome2 = "teste";
+//        String nome3 = "cadastro de teste";
+//        String nome4 = "nome novo";
+//        String nome5 = "testando";
+//        String nome6 = "status";
+
+            String nome2 = "Sapatilha Preta Nobuck";
+            String nome3 = "Sapatilha Dourada Viper Skin";
+            String nome4 = "Sapatilha Prateada";
+            String nome5 = "Sapatilha Verniz Vermelha";
+            String nome6 = "Mocassim Rosa Pelo Animal Print";
+            String nome7 = "Sapatilha Nobuck Rosa";
+            String nome8 = "Sapatilha Dourada Trançada";
+            
 //        String nome7 = "qualqeur";
-        String nome7 = "test7";
-//        String nome8 = "a";Segunda tentativa
-        String nome8 = "Segunda tentativa";
-        
-        //pp pagina principal
-        Produto produto = ProdutoDao.getProdutoPP(nome);
-        request.setAttribute("produto",produto); 
-        Produto produto2 = ProdutoDao.getProdutoPP(nome2);
-        request.setAttribute("produto2",produto2);
-        Produto produto3 = ProdutoDao.getProdutoPP(nome3);
-        request.setAttribute("produto3",produto3);
-        Produto produto4 = ProdutoDao.getProdutoPP(nome4);
-        request.setAttribute("produto4",produto4);
-        Produto produto5 = ProdutoDao.getProdutoPP(nome5);
-        request.setAttribute("produto5",produto5);
-        Produto produto6 = ProdutoDao.getProdutoPP(nome6);
-        request.setAttribute("produto6",produto6);
-        Produto produto7 = ProdutoDao.getProdutoPP(nome7);
-        request.setAttribute("produto7",produto7);
-        Produto produto8 = ProdutoDao.getProdutoPP(nome8);
-        //teste para imagem//
-        List<Imagem> listaImagens = ImagemDao.getImagem(nome8);
-        Imagem imagens = listaImagens.get(0);
+//            String nome7 = "test7";
+////        String nome8 = "a";Segunda tentativa
+//            String nome8 = "Segunda tentativa";
+
+            //pp pagina principal
+            Produto produto = ProdutoDao.getProdutoPP(nome);
+            request.setAttribute("produto", produto);
+            Produto produto2 = ProdutoDao.getProdutoPP(nome2);
+            request.setAttribute("produto2", produto2);
+            Produto produto3 = ProdutoDao.getProdutoPP(nome3);
+            request.setAttribute("produto3", produto3);
+            Produto produto4 = ProdutoDao.getProdutoPP(nome4);
+            request.setAttribute("produto4", produto4);
+            Produto produto5 = ProdutoDao.getProdutoPP(nome5);
+            request.setAttribute("produto5", produto5);
+            Produto produto6 = ProdutoDao.getProdutoPP(nome6);
+            request.setAttribute("produto6", produto6);
+            Produto produto7 = ProdutoDao.getProdutoPP(nome7);
+            request.setAttribute("produto7", produto7);
+            Produto produto8 = ProdutoDao.getProdutoPP(nome8);
+            //teste para imagem//
+            List<Imagem> listaImagens = ImagemDao.getImagem(nome8);
+            Imagem imagens = listaImagens.get(0);
 //        request.setAttribute("listaimagens", listaImagens);
-        request.setAttribute("produtoI8",imagens);
-        ///fim teste ////
-        
-        listaImagens = ImagemDao.getImagem(nome);
-        imagens = listaImagens.get(0);
-        request.setAttribute("produtoI",imagens);
-        request.setAttribute("produtoNome",nome); 
-        
-        listaImagens = ImagemDao.getImagem(nome7);
-        imagens = listaImagens.get(0);
-        request.setAttribute("produtoI7",imagens);
-        
-        
-        request.setAttribute("produto8",produto8);
-        request.setAttribute("produto8Nome",nome8);       
-        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/paginaPrincipalLogado.jsp");
-        requestDispatcher.forward(request, response);
+            request.setAttribute("produtoI8", imagens);
+            ///fim teste ////
+
+            listaImagens = ImagemDao.getImagem(nome);
+            imagens = listaImagens.get(0);
+            request.setAttribute("produtoI", imagens);
+            request.setAttribute("produtoNome", nome);
+
+            listaImagens = ImagemDao.getImagem(nome2);
+            imagens = listaImagens.get(3);
+            request.setAttribute("produtoI2", imagens);
+            request.setAttribute("produto2Nome", nome2);
+
+            listaImagens = ImagemDao.getImagem(nome3);
+            imagens = listaImagens.get(0);
+            request.setAttribute("produtoI3", imagens);
+            request.setAttribute("produto3Nome", nome3);
+
+            listaImagens = ImagemDao.getImagem(nome4);
+            imagens = listaImagens.get(0);
+            request.setAttribute("produtoI4", imagens);
+            request.setAttribute("produto4Nome", nome4);
+
+            listaImagens = ImagemDao.getImagem(nome5);
+            imagens = listaImagens.get(0);
+            request.setAttribute("produtoI5", imagens);
+            request.setAttribute("produto5Nome", nome5);
+
+            listaImagens = ImagemDao.getImagem(nome6);
+            imagens = listaImagens.get(0);
+            request.setAttribute("produtoI6", imagens);
+            request.setAttribute("produto6Nome", nome6);
+
+            listaImagens = ImagemDao.getImagem(nome7);
+            imagens = listaImagens.get(0);
+            request.setAttribute("produtoI7", imagens);
+
+            request.setAttribute("produto8", produto8);
+            request.setAttribute("produto8Nome", nome8);
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/paginaPrincipalLogado.jsp");
+            requestDispatcher.forward(request, response);
 //        List<Produto> listaProdutos = ProdutoDao.getProduto();;
-        //             utilizar metodo request  para armazenar a lista em request  
-       
-        
+            //             utilizar metodo request  para armazenar a lista em request  
+
 //        Produto statusALte = new Produto(statusAlt);
 //        statusALte.setStatusAlt(statusAlt);
 //        listaProdutos.add(statusALte);        
 //        request.setAttribute("listaProdutos", listaProdutos);        
 //     apagar   String nome = "joao";
 //     apagara   request.setAttribute("ativar", nome);   
-        
-                
 //        Dispacher vai apresentar o request na pagina jsp
 //        RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/paginaPrincipal.jsp");
 //        requestDispatcher.forward(request, response);  
-                    //////////fim testes//////////////////////////////////////////////////////////////////////////////////////////////////////////
-                    
+            //////////fim testes//////////////////////////////////////////////////////////////////////////////////////////////////////////
 //            getServletContext().getRequestDispatcher("/paginaPrincipalLogado.jsp");
             // levar funcionario para indexAdministrador//
 //            RequestDispatcher rd =
 //            getServletContext().getRequestDispatcher("/index.jsp");
 //            teste nav bar
 //            getServletContext().getRequestDispatcher("/indexAdministrador.jsp");
-            
-            
-
 //fim do teste nav bar
-
-
 //            rd.forward(request, response); 
-
-        }
-        else
-        {
-            RequestDispatcher rd =
-            getServletContext().getRequestDispatcher("/cadastrarProduto.jsp");
-            rd.forward(request, response); 
+        } else {
+            RequestDispatcher rd
+                    = getServletContext().getRequestDispatcher("/cadastrarProduto.jsp");
+            rd.forward(request, response);
         }
     }
 }

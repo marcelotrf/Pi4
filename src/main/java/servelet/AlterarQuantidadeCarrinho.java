@@ -66,14 +66,14 @@ public class AlterarQuantidadeCarrinho extends HttpServlet {
         String nome = request.getParameter("nome");
         String quantidadeStr = request.getParameter("quantidade");
         int quantidade = Integer.parseInt(quantidadeStr);
-        
+
         List<CarrinhoE> listaCarrinho = CarrinhoDao.getProdutoCarrinho();
-        
+
         request.setAttribute("listaCarrinho", listaCarrinho);
-            // mostrar na tela o request
-            RequestDispatcher rd
-                    = getServletContext().getRequestDispatcher("/carrinho.jsp");
-            rd.forward(request, response);
+        // mostrar na tela o request
+        RequestDispatcher rd
+                = getServletContext().getRequestDispatcher("/carrinho.jsp");
+        rd.forward(request, response);
 
     }
 
@@ -87,30 +87,39 @@ public class AlterarQuantidadeCarrinho extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
-        String teste ="teste";
+            throws ServletException, IOException {
+        String teste = "teste";
         String email = request.getParameter("email");
+//        int numeroOrdem = CarrinhoDao.getNumeroOrdem();
+//tentar com lista
+//        List<CarrinhoE> listaCarrinho = CarrinhoDao.getNumeroOrdem();
+//        CarrinhoE valorFinalL = listaCarrinho.get(listaCarrinho.size() - 1);
+//        int numeroOrdem = valorFinalL.getNumeroOrdem();
+//        numeroOrdem++;
+//////////// fim teste
+        int numeroOrdem = CarrinhoDao.getNumeroOrdem();
+//        numeroOrdem++;
+
         try {
-            CarrinhoDao.ConcluirOrdem();
+            CarrinhoDao.ConcluirOrdem(numeroOrdem);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(AlterarQuantidadeCarrinho.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(AlterarQuantidadeCarrinho.class.getName()).log(Level.SEVERE, null, ex);
         }
-        try {
-            CarrinhoDao.ConcluirOrdemFechar();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(AlterarQuantidadeCarrinho.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(AlterarQuantidadeCarrinho.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        try {
+//            CarrinhoDao.ConcluirOrdemFechar();
+//        } catch (ClassNotFoundException ex) {
+//            Logger.getLogger(AlterarQuantidadeCarrinho.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (SQLException ex) {
+//            Logger.getLogger(AlterarQuantidadeCarrinho.class.getName()).log(Level.SEVERE, null, ex);
+//        }
         //criar metodo para buscar numero pedido
-        int numeroOrdem = 1;
+//        int numeroOrdem = 1;
         request.setAttribute("pedido", numeroOrdem);
         RequestDispatcher rd
-                    = getServletContext().getRequestDispatcher("/numeroPedido.jsp");
-            rd.forward(request, response);
+                = getServletContext().getRequestDispatcher("/numeroPedido.jsp");
+        rd.forward(request, response);
     }
 
     /**
