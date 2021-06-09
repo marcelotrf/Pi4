@@ -154,7 +154,7 @@
             <div  style="margin-left: 100px;">
                 <h2>Endereço Entrega</h2><br/>
                 <!--CEP: <input type="text" id="cep" name="cep">-->    
-                <button onclick="endereco()">Obter endereço</button><br/><br/>
+                <!--<button onclick="endereco()">Obter endereço</button><br/><br/>-->
                 <!--<form action="AlterarQuantidadeCarrinho" method="POST">-->    
                 <form action="Carrinho" method="POST">  
                     CEP: <input type="text" id="cep" name="cep"> 
@@ -162,11 +162,12 @@
                     <input type="email" name="email" value="${email}" hidden/><br/>
 
                     <!--<p>Endereço de Faturamento </p>-->
-                    Logradouro: <input type="text" id="logradouro" name="logradouro" ><br/>
+                    
+<!--                    Logradouro: <input type="text" id="logradouro" name="logradouro" ><br/>
                     Bairo: <input type="text" id="logradouro2" name="bairro" readonly="true" >
                     Complemento: <input type="text" id="logradouro4" name="texto2" disabled><br/>
                     Localidade: <input type="text" id="logradouro5" name="cidade" ><br/>
-                    UF: <input type="text" id="logradouro6" name="uf" ><br/>
+                    UF: <input type="text" id="logradouro6" name="uf" ><br/>-->
                     <button type="submit">Calcular Frete </button><br/><br/>
 
                 </form>

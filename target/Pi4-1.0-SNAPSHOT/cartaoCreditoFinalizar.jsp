@@ -266,9 +266,10 @@
                 <!--nome do servlet aproveitado-->
                 <form action="AlterarQuantidadeCarrinho" method="POST">
                     <a href="PaginaPrincipal" class="btn btn-primary" style="margin-top: 50px;">Continuar Comprando</a>
-                    
+                     <!--<a href="PaginaPrincipal" class="btn btn-primary" style="margin-top: 50px;">Finalizar compra</a>-->
                      <a href="ListarCheckout?email=${comprador.email}" class="btn btn-primary" style="margin-top: 100px;">Voltar para escolha de pagamento</a>  
-                    <!--<button type="submit">Finalizar Compra </button><br/><br/>-->
+                    <button type="submit" class="btn btn-primary" style="margin-top: 50px;" >Finalizar Compra </button><br/><br/>-->
+                    
                 </form>
             </div> 
 
@@ -337,6 +338,6 @@
         fim cartao////////////////////////-->
 
         <!--<a href="PaginaPrincipal" class="btn btn-primary" style="margin-top: 100px;">voltar para Pagina Principal</a>-->
-        <a href="PaginaPrincipal" class="btn btn-primary" style="margin-top: 50px;">Finalizar compra</a>
+       
     </body>
 </html>
