@@ -27,7 +27,7 @@
             <div class="col-md-4">
                 <!--<h1>Hello World!</h1>-->
                 <div class="d-flex justify-content-between">
-                    <div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>
+                    <!--<div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>-->
                     <!--<div ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>-->
                 </div>
             </div>

@@ -1,0 +1,138 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+    
+}
+
+#header{
+    width: 100%;
+    height: 4rem;
+    background-color:black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav{
+    width: 100%;
+    height: 2rem;
+    background-color:white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.border_div{
+    width: 25%;
+    padding: 0.5rem;
+}
+
+.center_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+}
+
+.burger_div {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    /* border: 3px solid #fff; */
+  }
+  .burger_button {
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .burger_button::before,
+  .burger_button::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+  }
+  .burger_button::before {
+    transform: translateY(-16px);
+  }
+  .burger_button::after {
+    transform: translateY(16px);
+  }
+  /* ANIMATION */
+  .burger_div.open .burger_button {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .burger_div.open .burger_button::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .burger_div.open .burger_button::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+.p_text{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+#navigation{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#announce{
+    width: 100%;
+    height: 1rem;
+    background-color:black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+#imgs{
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between  ;
+}
+
+.banner_img{
+    width: 33.333%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}

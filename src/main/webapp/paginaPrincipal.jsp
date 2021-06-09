@@ -13,6 +13,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="./css/paginaPrincipal.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
         <title>JSP Page</title>
@@ -23,27 +26,52 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
         <!--        <h1>Hello World!</h1>-->
-        <div class="row">
-            <div class="col-md-12">Cabecalho<br>(col-md-12)</div>
-            <!--<h1>Hello World!</h1>-->
-            <div class="d-flex justify-content-between">
-                <div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>
-                <div class="w-50 p-3" class="d-flex justify-content-betweent"><input type="text" class="form-control" placeholder="Search"></div>
-                <div class="w-25 p-3" class="p-2 flex-fill bd-highlight"><a href="login.jsp">Login</a></div>
-                <div class="p-2 flex-fill bd-highlight"><span class="glyphicon glyphicon-search"></span></div>
-            </div>
-            <!--outro teste-->
-            <!--<img src="img/IMG_4594.JPG" class="img-fluid" width: 10%; alt="Texto alternativo(alt)">-->
 
-            <!--            <form class="navbar-form navbar-left" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search">
-                            </div>
-                            <button type="submit" class="btn btn-default">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </form>-->
+        <div id="header">
+            <div class="burger_div border_div">
+                <div class="burger_button"></div>
+            </div>
+            <p class="center_div">FGMSHOES</p>
+            <form class="border_div">
+                <input type="text" name="search" id="">
+            </form>
         </div>
+        <nav id="nav" class="nav">
+            <div></div>
+            <div id="navigation" class="navigation">
+                <p class="p_text">SAPATILHAS</p>
+                <p class="p_text">TÊNIS</p>
+                <p class="p_text">BOTAS</p>
+                <p class="p_text">SANDÁLIAS</p>
+            </div>
+            <div></div>
+        </nav>
+        <!--<div id="announce"><p class="p_text">FRETE GRATIS EM COMPRAS ACIMA DE 399.99</p></div>-->
+
+        <div id="imgs">
+            <img id="first" class="banner_img" src="./img/Sapatilha Laranja.png"/>
+            <img id="second" class="banner_img" src="./img/sapatilhalilas.JPG"/>
+            <img id="third" class="banner_img" src="./img/sapatilharosa.JPG"/>
+        </div>
+        <!--<h1>Hello World!</h1>-->
+        <!--<div class="d-flex justify-content-between">
+            <div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>
+            <div class="w-50 p-3" class="d-flex justify-content-betweent"><input type="text" class="form-control" placeholder="Search"></div>
+            <div class="w-25 p-3" class="p-2 flex-fill bd-highlight"><a href="login.jsp">Login</a></div>
+            <div class="p-2 flex-fill bd-highlight"><span class="glyphicon glyphicon-search"></span></div>
+        </div> -->
+        <!--outro teste-->
+        <!--<img src="img/IMG_4594.JPG" class="img-fluid" width: 10%; alt="Texto alternativo(alt)">-->
+
+        <!--            <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </form>-->
+
         <!--</div>--> 
         <!--apenas teste-->
         <!--    <form class="navbar-form navbar-left" role="search">
@@ -57,42 +85,8 @@
         <!--<a href="login.jsp">Login</a>-->
         <!--</div>-->
         <div class="row">
-            <div class="col-md-6"> 
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 1</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 2</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 3</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 4</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 5</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 6</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 7</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox 8</label>
-                </div>                
-                Coluna de anuncios<br>(col-md-6)
-            </div>                
-            <div class="col-md-6">
+
+            <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
@@ -108,7 +102,7 @@
                                 <!--<a href="" class="btn btn-primary">Go 2</a>-->
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+
 
                     </div>
                     <div class="col-md-3">
@@ -121,7 +115,7 @@
                                 <a href="VisualizarProduto?nome=${produto2Nome}" class="btn btn-primary">Ver</a> 
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+
                     </div>
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
@@ -133,7 +127,7 @@
                                 <a href="VisualizarProduto?nome=${produto3Nome}" class="btn btn-primary">Ver</a>
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+
                     </div>
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
@@ -145,7 +139,7 @@
                                 <a href="VisualizarProduto?nome=${produto4Nome}" class="btn btn-primary">Ver</a>
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+
                     </div>
                 </div>
                 <div class="row">
@@ -159,7 +153,7 @@
                                 <a href="VisualizarProduto?nome=${produto5Nome}" class="btn btn-primary">Ver</a>
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+
                     </div>
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
@@ -171,7 +165,7 @@
                                 <a href="VisualizarProduto?nome=${produto6Nome}" class="btn btn-primary">Ver</a>
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+
                     </div>
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
@@ -183,7 +177,7 @@
                                 <a href="VisualizarProduto?nome=${produto7Nome}" class="btn btn-primary">Ver</a>
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+
                     </div>
                     <div class="col-md-3">
                         <div class="card" style="width: 18rem;">
@@ -199,10 +193,23 @@
                                 <a href="VisualizarProduto?nome=${produto8Nome}" class="btn btn-primary">Ver</a>                              
                             </div>
                         </div>
-                        Coluna de anuncios<br>(col-md-3)
+
                     </div>
                 </div>
             </div>                
         </div>
+        <script>
+            const menuBtn = document.querySelector('.burger_div');
+            let menuOpen = false;
+            menuBtn.addEventListener('click', () => {
+                if (!menuOpen) {
+                    menuBtn.classList.add('open');
+                    menuOpen = true;
+                } else {
+                    menuBtn.classList.remove('open');
+                    menuOpen = false;
+                }
+            });
+        </script>
     </body>
 </html>
