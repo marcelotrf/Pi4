@@ -18,11 +18,12 @@
     </head>
     <body>
         <div class="row">
-            <div class="col-md-12"><br></div>
+            <div class="col-md-6"><br></div>
             <!--<h1>Hello World!</h1>-->
             <div class="d-flex justify-content-between">
                 <!--<div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>-->
-                <div class="w-50 p-3" class="d-flex justify-content-betweent"><input type="text" class="form-control" placeholder="Search"></div>
+                  <div class="w-50 p-6" class="d-flex justify-content-betweent"><input type="text" class="form-control" placeholder="Search"></div>
+                  
                 <div class="w-25 p-3" class="p-2 flex-fill bd-highlight"><a href="login.jsp">Login</a></div>
                 <div class="p-2 flex-fill bd-highlight"><span class="glyphicon glyphicon-search"></span></div>
             </div>           
@@ -100,7 +101,7 @@
                             </b>
 
                         </h4> 
-                        <a class="btn btn-dark" href="PaginaPrincipal">Pagina principal</a>
+                        <!--<a class="btn btn-dark" href="PaginaPrincipal">Pagina principal</a>-->
 
                     </td>
 

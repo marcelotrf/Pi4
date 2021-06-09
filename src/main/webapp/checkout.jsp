@@ -363,6 +363,6 @@
         <!--</form>-->
         <!--fim do teste///////////////////////////////////////-->
 
-        <a href="PaginaPrincipal" class="btn btn-primary" style="margin-top: 100px;">voltar para algum lugar</a>
+        <a href="PaginaPrincipal" class="btn btn-primary" style="margin-top: 100px;">Voltar para o carrinho</a>
     </body>
 </html>

@@ -26,7 +26,7 @@
             <div class="col-md-12"><br>
                 <!--<h1>Hello World!</h1>-->
                 <div class="d-flex justify-content-between">
-                    <div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>
+
                     <div class="w-50 p-3" class="d-flex justify-content-betweent"><input type="text" class="form-control" placeholder="Search"></div>
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <!--<a class="navbar-brand" href="#">Navbar</a>-->
@@ -77,7 +77,7 @@
         </thead>
 
         <tbody>
-            ter que criar banco carrinho e salvar e listar as informacoes
+            <!--ter que criar banco carrinho e salvar e listar as informacoes-->
             <c:forEach var="produto" items="${listaCarrinho}">
                 <tr>                        
                     <td><img class="thumbnail" src="img/${produto.nomeImagem}"> ${produto.nome}</td>  
@@ -130,7 +130,7 @@
                             </b>
 
                         </h4> 
-                        <a class="btn btn-dark" href="PaginaPrincipal">Pagina principal teste</a>
+                        <!--<a class="btn btn-dark" href="PaginaPrincipal">Pagina principal teste</a>-->
 
                     </td>
 
@@ -143,7 +143,7 @@
 
                 </tr>
             </c:forEach>            
-            novo valor final ${valorFinal}
+           <!-- novo valor final ${valorFinal} -->
         </tbody>
     </table>
     <hr>
@@ -343,7 +343,7 @@
             var Localidade = document.getElementById("logradouro5");
             var UF = document.getElementById("logradouro6");
             var url = "http://viacep.com.br/ws/" + cep.value + "/json/"
-            var mensagem = "endereco ta muito invalido";
+            var mensagem = "endereço invalido";
             //                alert(url);
             // utiliza para passar a url ao navegador
             fetch(url, {method: 'GET'})

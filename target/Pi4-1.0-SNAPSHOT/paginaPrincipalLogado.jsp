@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/slider.css" />
+         <link rel="stylesheet" href="./css/paginaPrincipalLogado.css">
 
         <title>JSP Page</title>
     </head>
@@ -20,20 +21,31 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
         <!--<h1>Hello World!</h1>-->
-        <h1>Tela Principal </h1>
+         <div id="header">
+            <div class="burger_div border_div">
+                <div class="burger_button"></div>
+            </div>
+            <p class="center_div">FGMSHOES</p>
+            <form class="border_div">
+                <input type="text" name="search" id="">
+              
+            </form>
+        </div>
+       
+        <!--<h1>Tela Principal </h1>-->
         <div class="col-md-12"><br></div>        
         <div class="row">
             <!--divisão do logo-->
             <div class="col-md-4">
                 <!--<h1>Hello World!</h1>-->
                 <div class="d-flex justify-content-between">
-                    <div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>
+                    <!--<div class="w-25 p-3" class="h-25 d-inline-block" class="p-2 flex-fill bd-highlight"" ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>-->
                     <!--<div ><img src="./img/Sapatilha Laranja.png" class="img-fluid" alt="Texto alternativo(alt)"></div>-->
                 </div>
             </div>
             <!--barra de pesquisa-->
             <div class="col-md-4">
-                <div class="w-50 p-3" class="d-flex justify-content-betweent"><input type="text" class="form-control" placeholder="Search"></div>
+                <!--<div class="w-50 p-3" class="d-flex justify-content-betweent"><input type="text" class="form-control" placeholder="Search"></div>-->
             </div>
             <!--menu nav bar--> 
             <div class="col-md-4">
@@ -45,6 +57,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
+                            
 
                             <!--                            <li class="nav-item active">
                                                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -96,7 +109,7 @@
                     </form>-->
         <!--</div>-->
 
-        <div class="row">
+       <!-- <div class="row">
             <div class="col-md-6"> 
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -131,9 +144,9 @@
                     <label class="custom-control-label" for="customCheck1">Categoria 8</label>
                 </div>                
 
-            </div> 
+            </div> -->
             <!--apresentações dos cards dos produtos-->
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="row">
                     <!--primeiro produto-->
                     <div class="col-md-3">
