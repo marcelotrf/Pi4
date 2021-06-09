@@ -180,7 +180,8 @@ String nome = "Mocassim Preto Strass";
         // 8 esta fora de ordem
         
         request.setAttribute("produto8",produto8);
-        request.setAttribute("produto8Nome",nome8);       
+        request.setAttribute("produto8Nome",nome8);     
+        request.setAttribute("nome",email);  
         RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/paginaPrincipalLogado.jsp");
         requestDispatcher.forward(request, response);
     }
