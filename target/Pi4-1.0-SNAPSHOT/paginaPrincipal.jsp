@@ -26,7 +26,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
         <!--        <h1>Hello World!</h1>-->
-
+  
         <div id="header">
             <div class="burger_div border_div">
                 <div class="burger_button"></div>
@@ -34,6 +34,7 @@
             <p class="center_div">FGMSHOES</p>
             <form class="border_div">
                 <input type="text" name="search" id="">
+                <div class="w-25 p-3" class="p-2 flex-fill bd-highlight"><a href="login.jsp">Login</a></div>
             </form>
         </div>
         <nav id="nav" class="nav">

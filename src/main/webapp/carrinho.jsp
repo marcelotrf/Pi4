@@ -113,7 +113,7 @@
 
                 </tr>
             </c:forEach>            
-            novo valor final ${valorFinal}
+           <!-- novo valor final ${valorFinal} -->
         </tbody>
     </table>
     <hr>
@@ -162,7 +162,7 @@
                     <br/>
                     <br/>
                    <!--<a class="btn btn-dark" href="ListarCheckout?nome=${nome}">Comprar</a>-->                  
-                    <a class="btn btn-dark" href="login.jsp">Fazer Login</a>                  
+                    <a class="btn btn-dark" href="login.jsp">Comprar</a>                  
 
                 </b>
 
